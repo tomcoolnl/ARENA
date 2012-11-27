@@ -1,5 +1,5 @@
 
-;var Set = function () {
+;var Set = function Set() {
 	this.rawArray = new Array();
 };
 
@@ -10,7 +10,7 @@ Set.prototype = {
 	 * @param {Object} object The object to add
 	 * @returns void
 	 */
-	add : function (object) {
+	add : function(object) {
 		if (this.contains(object) == undefined) {
 			this.rawArray.push(object);
 		};
@@ -21,7 +21,7 @@ Set.prototype = {
 	 * @param {Number} index The index within the Set
 	 * @return void
 	 */
-	get : function (index) {
+	get : function(index) {
 		return this.rawArray[index];
 	},
 	
@@ -30,7 +30,7 @@ Set.prototype = {
 	 * @param {Object} object The object to remove
 	 * @returns void
 	 */
-	remove : function (object) {
+	remove : function(object) {
 		var index = this.contains(object);
 		if (typeof index !== 'undefined') {
 			this.rawArray.remove(index);
@@ -42,7 +42,7 @@ Set.prototype = {
 	 * @param {Object} object The object to look-up
 	 * @returns Number || undefined
 	 */
-	contains : function (object) {
+	contains : function(object) {
 		for (var i = 0, n = this.rawArray.length; i < n; i += 1) {
 			var obj2 = this.rawArray[i];
 			if (object.equals(obj2)) {
