@@ -17,7 +17,6 @@ function LinkedList() {
 	 * @private
 	 */
 	this._length = 0;
-
 	/**
 	 * Pointer to first item in the list.
 	 * @property _head

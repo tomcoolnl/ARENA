@@ -22,9 +22,9 @@ EventPublisher.prototype.publish = function( publication, type ) {
 };
 
 EventPublisher.prototype.visitSubscribers = function( action, arg, type ) {
-	var type = type || 'any',
-        subscribers = this.subscribers[ type ],
-        i, max = subscribers.length;
+   type = type || 'any';
+   var subscribers = this.subscribers[ type ], 
+       i, max = subscribers.length;
 
     for (i = 0; i < max; i += 1) {
         if (action === 'publish') {

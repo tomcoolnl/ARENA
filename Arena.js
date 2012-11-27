@@ -9,7 +9,7 @@
  * 
  * @constructor
  */
-;var ARENA = (function (window, document) {
+;ARENA = (function (window, document) {
 	
 	'use strict';
 	
