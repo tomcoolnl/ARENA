@@ -1,5 +1,5 @@
 
-SpaceShooter = (function(window, document, undefined) {
+;SpaceShooter = (function(window, document, undefined) {
 	
 	'use strict';
 	
@@ -7,7 +7,7 @@ SpaceShooter = (function(window, document, undefined) {
 	
 	canvas, context,
 	
-	player, enemies,
+	hero, enemies,
 	
 	events = {
 		directionalKeys : null,
@@ -39,46 +39,37 @@ SpaceShooter = (function(window, document, undefined) {
 				};
 			});
 			
-			events.hiddentab = new EventListener(window, 'onblur', function(event) {
-				alert('window blurred');
-			});
-			
-			if (window.onblur) {
-				alert('window blurred');
-			};
-			
 			events.directionalKeys = new DirectionalKeyEventListener({
 				left : function () {
-					player.moveLeft();
+					hero.moveLeft();
 				},
 				right : function() {
-					player.moveRight();
+					hero.moveRight();
 				}
 			}, wasd);
 			
 			events.shoot = new KeyEventListener('space', KeyEventListener.eventType.DOWN, function () {
 				STATE._current = STATE.PLAYING;
-				player.shoot();
+				hero.shoot();
 			});
 		},
 		
 	
 		handleCollisions : function() {
 	
-			player.bullets.forEach(function(bullet) {
+			hero.bullets.forEach(function(bullet) {
 				enemies.forEach(function(enemy) {
 					if ( _.collides(bullet, enemy) ) {
 						enemy.explode();
 						bullet.explode();
-						// bullet.active = false;
 					};
 				});
 			});
 
 			enemies.forEach(function(enemy) {
-				if ( _.collides(enemy, player) ) {
+				if ( _.collides(enemy, hero) ) {
 					enemy.explode();
-					player.explode();
+					hero.explode();
 				};
 			}); 
 		},
@@ -91,8 +82,8 @@ SpaceShooter = (function(window, document, undefined) {
 		},
 		
 		update : function() {
-			//update player
-			player.update();
+			//update hero
+			hero.update();
 			//update enemies
 			enemies.forEach(function(enemy) {
 				enemy.update();
@@ -101,7 +92,7 @@ SpaceShooter = (function(window, document, undefined) {
 			enemies = enemies.filter(function(enemy) {
 				return enemy.active;
 			});
-			//detect bullet impact or if any enemy hits player
+			//detect bullet impact or if any enemy hits hero
 			 _.handleCollisions();
 			//TODO this can be more intelligent
 			if (Math.random() < 0.02) {
@@ -109,11 +100,15 @@ SpaceShooter = (function(window, document, undefined) {
 			};
 			
 			events.directionalKeys.handleMovement();
+            
+            if (events.directionalKeys.noKeysArePressed() === false) {
+                hero.resetSprite();
+            };
 		},
 		
 		draw : function() {
 			context.clearRect(0, 0, canvas.width, canvas.height);
-		    player.draw();
+		    hero.draw();
 		    enemies.forEach(function(enemy) {
 				enemy.draw();
 			});
@@ -142,11 +137,14 @@ SpaceShooter = (function(window, document, undefined) {
 		},
 		
 		init : function() {
+            self    = this;
+            
 			canvas 	= document.querySelector('#main');
 			context = canvas.getContext('2d');
-			player 	= new Hero(canvas, context, true, 50, 270, 32, 32);
+			
+            hero 	= new Hero(canvas, context, true, 50, 270, 40, 40);
 			enemies = new Array();
-			// console.dir(player);
+			// console.dir(hero);
 			// bind keyboard
 			_.bindKeyEvents();
 			// start the game

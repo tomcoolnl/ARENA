@@ -8,7 +8,9 @@ Hero = function Hero(canvas, context, active, posx, posy, width, height) {
 	this.width 		= width;
 	this.height 	= height;
 	this.bullets 	= [];
-	this.sprite 	= new Sprite('images/player.png', this.width, this.height, 0, 0);
+    
+    this.defaultSpriteOffsetX = 40;
+	this.sprite 	= new Sprite('images/game.png', this.width, this.height, this.defaultSpriteOffsetX, 0);
 };
 
 Hero.extends(Entity);
@@ -27,13 +29,15 @@ Hero.prototype.update = function() {
 };
 
 Hero.prototype.moveLeft = function() {
-	this.posx -= 8;
+	this.posx -= 6;
 	this.posx = this.posx.clamp(0, this.canvas.width - this.width);
+    this.sprite.offsetX = 0;
 };
 
 Hero.prototype.moveRight = function() {
-	this.posx += 8;
+	this.posx += 6;
 	this.posx = this.posx.clamp(0, this.canvas.width - this.width);
+    this.sprite.offsetX = 80;
 };
 
 Hero.prototype.shoot = function() {
@@ -42,6 +46,10 @@ Hero.prototype.shoot = function() {
 	this.bullets.push(
 		new Hero.Bullet( this.canvas, this.context, true, 8, position.x, position.y, 7, 19 )
 	);
+};
+
+Hero.prototype.resetSprite = function() {
+	this.sprite.offsetX = this.defaultSpriteOffsetX;
 };
     
 Hero.prototype.midpoint = function() {

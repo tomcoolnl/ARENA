@@ -1,5 +1,5 @@
 
-Entity = function Entity(canvas, context, active, posx, posy, width, height, spriteSrc){
+Entity = function Entity(canvas, context, active, posx, posy, width, height, spriteSrc) {
 	
 	this.canvas = canvas;
 	this.context = context;
@@ -16,7 +16,7 @@ Entity = function Entity(canvas, context, active, posx, posy, width, height, spr
 	};
 	
 	return this;
-}
+};
 
 Entity.prototype.isAlive = function() {
 	'use strict';

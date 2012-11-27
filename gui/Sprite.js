@@ -9,8 +9,8 @@ var Sprite = function Sprite(src, width, height, offsetX, offsetY, frames, durat
 	this.frames 		= 1;
 	this.currentFrame 	= 0;
 	this.duration 		= 1;
-	this.posX 			= 0;
-	this.posY 			= 0;
+	this.posx 			= 0;
+	this.posy 			= 0;
 	this.shown 			= true;
 	this.zoomLevel 		= 1;
 	
@@ -34,8 +34,8 @@ Sprite.prototype.setSpritesheet = function (src) {
 	};
 };
 Sprite.prototype.setPosition = function (x, y) {
-	this.posX = x;
-	this.posY = y;
+	this.posx = x;
+	this.posy = y;
 };
 Sprite.prototype.setOffset = function (x, y) {
 	this.offsetX = x;
