@@ -1,0 +1,4528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - glow.NodeList</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="../symbols/_global_.html">_global_</a></i></li>
+	
+	<li><a href="../symbols/glow.html">glow</a></li>
+	
+	<li><a href="../symbols/glow.env.html">glow.env</a></li>
+	
+	<li><a href="../symbols/glow.events.html">glow.events</a></li>
+	
+	<li><a href="../symbols/glow.events.domevent.html">glow.events.DomEvent</a></li>
+	
+	<li><a href="../symbols/glow.events.event.html">glow.events.Event</a></li>
+	
+	<li><a href="../symbols/glow.events.keyboardevent.html">glow.events.KeyboardEvent</a></li>
+	
+	<li><a href="../symbols/glow.events.target.html">glow.events.Target</a></li>
+	
+	<li><a href="../symbols/glow.nodelist.html">glow.NodeList</a></li>
+	
+	<li><a href="../symbols/glow.util.html">glow.util</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Class glow.NodeList
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/build_2.0.0-alpha1_core.js.html">core.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class glow.NodeList.">
+				<caption>Class Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/glow.nodelist.html#constructor">glow.NodeList</a></b>(contents)
+							</div>
+							<div class="description">An array-like collection of DOM Nodes
+			It is recommended to create a NodeList using the shortcut function <a href="../symbols/glow.html">glow</a>.</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the fields documented in the class glow.NodeList.">
+					<caption>Field Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Field Attributes</th>
+							<th scope="col">Field Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">
+								<b><a href="../symbols/glow.nodelist.html#length">length</a></b>
+								</div>
+								<div class="description">Number of nodes in the NodeList</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class glow.NodeList.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#addClass">addClass</a></b>(name)
+								</div>
+								<div class="description">Adds a class to each node.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#after">after</a></b>(nodes)
+								</div>
+								<div class="description">Insert node(s) after each node in this NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#ancestors">ancestors</a></b>(filter)
+								</div>
+								<div class="description">Gets the unique ancestor nodes of each node as a new NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#append">append</a></b>(nodes)
+								</div>
+								<div class="description">Appends node to each node in this NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#appendTo">appendTo</a></b>(node)
+								</div>
+								<div class="description">Appends nodes in this NodeList to given node(s)
+			If appending to more than one node, the NodeList is appended
+			to the first node and clones are appended to the others.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#attr">attr</a></b>(name, value)
+								</div>
+								<div class="description">Gets or sets attributes.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#before">before</a></b>(nodes)
+								</div>
+								<div class="description">Insert node(s) before each node in this NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#children">children</a></b>()
+								</div>
+								<div class="description">Gets the child elements of each node as a new NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#clone">clone</a></b>()
+								</div>
+								<div class="description">Clones each node in the NodeList, along with data & event listeners</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#contains">contains</a></b>(Single)
+								</div>
+								<div class="description">Find if this NodeList contains the given element</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#copy">copy</a></b>()
+								</div>
+								<div class="description">Copies each node in the NodeList, excluding data & event listeners</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#css">css</a></b>(property, value)
+								</div>
+								<div class="description">Get / set a CSS property value</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#data">data</a></b>(key, val)
+								</div>
+								<div class="description">Use this to safely attach arbitrary data to any DOM Element.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#delegate">delegate</a></b>(eventName, selector, callback, thisVal)
+								</div>
+								<div class="description">Listen for an event occurring on child elements matching a selector.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#destroy">destroy</a></b>()
+								</div>
+								<div class="description">Removes each element from the document
+			The element, attached listeners & attached data will be
+			destroyed to free up memory.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#detach">detach</a></b>(eventName, callback)
+								</div>
+								<div class="description">detach a listener from elements
+		   This will detach the listener from each dom node in the NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#detachDelegate">detachDelegate</a></b>(eventName, selector, callback)
+								</div>
+								<div class="description">detach a delegated listener from elements
+		   This will detach the listener from each dom node in the NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#each">each</a></b>(callback)
+								</div>
+								<div class="description">Calls a function for each node in the list.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#empty">empty</a></b>()
+								</div>
+								<div class="description">Removes the nodes' contents</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#eq">eq</a></b>(nodeList)
+								</div>
+								<div class="description">Compares this NodeList to another
+			Returns true if both NodeLists contain the same items in the same order</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#filter">filter</a></b>(test)
+								</div>
+								<div class="description">Filter the NodeList</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#fire">fire</a></b>(eventName, event)
+								</div>
+								<div class="description">Fire an event on dom nodes within the NodeList
+		   Note, this will only trigger event listeners to be called, it won't
+		   for example, move the mouse or click a link on the page.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#get">get</a></b>(selector)
+								</div>
+								<div class="description">Gets decendents of nodes that match a CSS selector.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#hasAttr">hasAttr</a></b>(name)
+								</div>
+								<div class="description">Does the node have a particular attribute?
+		
+		The first node in this NodeList is tested.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#hasClass">hasClass</a></b>(name)
+								</div>
+								<div class="description">Does the node have a particular class?
+
+		The first node in this NodeList is tested.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#height">height</a></b>(height)
+								</div>
+								<div class="description">Gets / set element height
+		Return value does not include the padding or border of the element in
+		browsers supporting the correct box model.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#hide">hide</a></b>()
+								</div>
+								<div class="description">Hides all items in the NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#html">html</a></b>(htmlString)
+								</div>
+								<div class="description">Gets / sets HTML content
+			Either gets content of the first element, or sets the content
+			for all elements in the list</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#insertAfter">insertAfter</a></b>(nodes)
+								</div>
+								<div class="description">Insert this NodeList after the given nodes
+			If inserting after more than one node, the NodeList is inserted
+			after the first node and clones are inserted after the others.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#insertBefore">insertBefore</a></b>(nodes)
+								</div>
+								<div class="description">Insert this NodeList before the given nodes
+			If inserting before more than one node, the NodeList is inserted
+			before the first node and clones are inserted before the others.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#is">is</a></b>(selector)
+								</div>
+								<div class="description">Tests if the first element matches a CSS selector</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#item">item</a></b>(index)
+								</div>
+								<div class="description">Get a single item from the list as an NodeList
+			Negative numbers can be used to get items from the end of the
+			list.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#next">next</a></b>(search)
+								</div>
+								<div class="description">Gets the next sibling element for each node in the ElementList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#offset">offset</a></b>()
+								</div>
+								<div class="description">Gets the offset from the top left of the document.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#on">on</a></b>(eventName, callback, thisVal)
+								</div>
+								<div class="description">Listen for an event.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#parent">parent</a></b>(search)
+								</div>
+								<div class="description">Gets the unique parent nodes of each node as a new NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#position">position</a></b>()
+								</div>
+								<div class="description">Get the top & left position of an element relative to its positioned parent
+		This is useful if you want to make a position:static element position:absolute
+		and retain the original position of the element</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#prepend">prepend</a></b>(nodes)
+								</div>
+								<div class="description">Prepends nodes to each node in this NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#prependTo">prependTo</a></b>(node)
+								</div>
+								<div class="description">Prepends nodes in this NodeList to given node(s)
+			If prepending to more than one node, the NodeList is prepended
+			to the first node and clones are prepended to the others.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#prev">prev</a></b>(search)
+								</div>
+								<div class="description">Gets the previous sibling element for each node in the ElementList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#prop">prop</a></b>(name, value)
+								</div>
+								<div class="description">Gets or sets node properties.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#push">push</a></b>(nodes)
+								</div>
+								<div class="description">Adds nodes to the NodeList</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#remove">remove</a></b>()
+								</div>
+								<div class="description">Removes each element from the document
+			If you no longer need the elements, consider using
+			{@link glow.NodeList#destroy destroy}</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#removeAttr">removeAttr</a></b>(name)
+								</div>
+								<div class="description">Removes an attribute from each node.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#removeClass">removeClass</a></b>(name)
+								</div>
+								<div class="description">Removes a class from each node.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#removeData">removeData</a></b>(key)
+								</div>
+								<div class="description">Removes data previously added by <a href="../symbols/glow.nodelist.html#data">glow.NodeList#data</a> from each node in this NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#replaceWith">replaceWith</a></b>(elements)
+								</div>
+								<div class="description">Replace elements with another</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#scrollLeft">scrollLeft</a></b>(val)
+								</div>
+								<div class="description">Gets/sets the number of pixels the element has scrolled horizontally
+		To get/set the scroll position of the window, use this method on
+		a nodelist containing the window object.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#scrollTop">scrollTop</a></b>(val)
+								</div>
+								<div class="description">Gets/sets the number of pixels the element has scrolled vertically
+		To get/set the scroll position of the window, use this method on
+		a nodelist containing the window object.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#show">show</a></b>()
+								</div>
+								<div class="description">Shows all hidden items in the NodeList.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#slice">slice</a></b>(start, end)
+								</div>
+								<div class="description">Get a section of an NodeList
+			Operates in the same way as an Array's slice method</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#sort">sort</a></b>(func)
+								</div>
+								<div class="description">Sort the elements in the list.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#text">text</a></b>(text)
+								</div>
+								<div class="description">Gets / set the text content
+			Either gets content of the first element, or sets the content
+			for all elements in the list</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#toggleClass">toggleClass</a></b>(name)
+								</div>
+								<div class="description">Toggles a class on each node.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#unwrap">unwrap</a></b>()
+								</div>
+								<div class="description">Removes the parent of each item in the list</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#val">val</a></b>(value)
+								</div>
+								<div class="description">Gets or sets form values for the first node.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#width">width</a></b>(width)
+								</div>
+								<div class="description">Gets / set element width
+		Return value does not include the padding or border of the element in
+		browsers supporting the correct box model.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#wrap">wrap</a></b>(wrapper)
+								</div>
+								<div class="description">Wraps the given NodeList with the specified element(s).</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the events documented in the class glow.NodeList.">
+					<caption>Event Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Event Attributes</th>
+							<th scope="col">Event Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#event:keydown">keydown</a></b>(event)
+								</div>
+								<div class="description">Fires when the user presses a key
+			Only fires if the element has focus, listen for this event on
+			the document to catch all keydowns.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#event:keypress">keypress</a></b>(event)
+								</div>
+								<div class="description">Fires when a key's command executes.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#event:keyup">keyup</a></b>(event)
+								</div>
+								<div class="description">Fires when the user releases a key
+			Only fires if the element has focus, listen for this event on
+			the document to catch all keyups.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#event:mouseenter">mouseenter</a></b>(event)
+								</div>
+								<div class="description">Fires when the mouse enters the element specifically, does not bubble</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/glow.nodelist.html#event:mouseleave">mouseleave</a></b>(event)
+								</div>
+								<div class="description">Fires when the mouse leaves the element specifically, does not bubble</div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Class Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>glow.NodeList</b>(contents)
+				</div>
+				
+				<div class="description">
+					An array-like collection of DOM Nodes
+			It is recommended to create a NodeList using the shortcut function <a href="../symbols/glow.html">glow</a>.
+					
+				</div>
+				
+				
+				
+				<pre class="code">
+			// empty NodeList
+			var myNodeList = glow();</pre>
+				
+				<pre class="code">
+			// using glow to return a NodeList then chaining methods
+			glow('p').addClass('eg').append('<div>Hello!</div>');</pre>
+				
+				<pre class="code">
+			// creating an element from a string
+			glow('<div>Hello!</div>').appendTo('body');</pre>
+				
+				
+				
+				
+					
+						<dl class="detailList">
+						<dt class="heading">Parameters:</dt>
+						
+							<dt>
+								<span class="light fixedFont">{string | glow.NodeList | Node | Node[] | Window}</span>  <b>contents</b>
+								
+							</dt>
+								<dd>Items to populate the NodeList with.
+			This parameter will be passed to <a href="../symbols/glow.nodelist.html#push">glow.NodeList#push</a>.
+			
+			Strings will be treated as CSS selectors unless they start with '<', in which
+			case they'll be treated as an HTML string.</dd>
+						
+						</dl>
+					
+					
+					
+					
+					
+					
+					
+						<dl class="detailList">
+						<dt class="heading">See:</dt>
+						
+							<dd><a href="http://wiki.github.com/jeresig/sizzle/">Supported CSS selectors</a></dd>
+						
+						</dl>
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+				<div class="sectionTitle">
+					Field Detail
+				</div>
+				
+					<a name="length"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Number}</span>
+					<b>length</b>
+					
+					</div>
+					<div class="description">
+						Number of nodes in the NodeList
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// get the number of paragraphs on the page
+			glow('p').length;</pre>
+					
+					
+
+						
+						
+						
+						
+
+					
+				
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name="addClass"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>addClass</b>(name)
+					
+					</div>
+					<div class="description">
+						Adds a class to each node.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		glow("#login a").addClass("highlight");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the class to add.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="after"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>after</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Insert node(s) after each node in this NodeList.
+			If there is more than one node in this NodeList, 'nodes'
+			will be inserted after the first element and clones will be
+			inserted after each subsequent element.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// adds a paragraph after each heading
+			glow('h1, h2, h3').after('<p>That was a nice heading.</p>');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Node(s) to insert
+			Strings will be treated as HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Original NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="ancestors"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{glow.dom.NodeList}</span>
+					<b>ancestors</b>(filter)
+					
+					</div>
+					<div class="description">
+						Gets the unique ancestor nodes of each node as a new NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get ancestor elements for anchor elements 
+		var ancestors = glow.dom.get("a").ancestors();</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Function|string}</span> <b>filter</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Filter test
+		If a string is provided, it is used in a call to {@link glow.ElementList#is ElementList#is}.
+		If a function is provided it will be passed 2 arguments, the index of the current item,
+		and the ElementList being itterated over.
+		Inside the function 'this' refers to the HTMLElement.
+		Return true to keep the node, or false to remove it.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{glow.dom.NodeList}</span> Returns NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="append"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>append</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Appends node to each node in this NodeList.
+			If there is more than one node in this NodeList, then the given nodes
+			are appended to the first node and clones are appended to the other
+			nodes.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// ends every paragraph with '...'
+			glow('p').append('<span>...</span>');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Nodes(s) to append
+			Strings will be treated as HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Original NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="appendTo"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>appendTo</b>(node)
+					
+					</div>
+					<div class="description">
+						Appends nodes in this NodeList to given node(s)
+			If appending to more than one node, the NodeList is appended
+			to the first node and clones are appended to the others.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// appends '...' to every paragraph
+			glow('<span>...</span>').appendTo('p');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>node</b>
+									
+								</dt>
+								<dd>Node(s) to append to.
+			Strings will be treated as CSS selectors or HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> The appended nodes.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="attr"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string | undefined | glow.NodeList}</span>
+					<b>attr</b>(name, value)
+					
+					</div>
+					<div class="description">
+						Gets or sets attributes.
+
+		When getting an attribute, it is retrieved from the first
+		node in this NodeList. Setting attributes applies the change
+		to each element in this NodeList.
+
+		To set an attribute, pass in the name as the first
+		parameter and the value as a second parameter.
+
+		To set multiple attributes in one call, pass in an object of
+		name/value pairs as a single parameter.
+
+		For browsers that don't support manipulating attributes
+		using the DOM, this method will try to do the right thing
+		(i.e. don't expect the semantics of this method to be
+		consistent across browsers as this is not possible with
+		currently supported browsers).
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		var myNodeList = glow(".myImgClass");
+
+		// get an attribute
+		myNodeList.attr("class");
+
+		// set an attribute
+		myNodeList.attr("class", "anotherImgClass");
+
+		// set multiple attributes
+		myNodeList.attr({
+		  src: "a.png",
+		  alt: "Cat jumping through a field"
+		});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | Object}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the attribute, or an object of name/value pairs</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>value</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The value to set the attribute to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string | undefined | glow.NodeList}</span> When setting attributes this method returns its own NodeList, otherwise
+		returns the attribute value. The attribute name is always treated as
+		case-insensitive. When getting, the returned value will be of type string unless
+		that particular attribute was never set and there is no default value, in which
+		case the returned value will be an empty string.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="before"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>before</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Insert node(s) before each node in this NodeList.
+			If there is more than one node in this NodeList, 'nodes'
+			will be inserted before the first element and clones will be
+			inserted before each subsequent element.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// adds a div before each paragraph
+			glow('p').before('<div>Here comes a paragraph!</div>');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Node(s) to insert
+			Strings will be treated as HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Original NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="children"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{glow.dom.NodeList}</span>
+					<b>children</b>()
+					
+					</div>
+					<div class="description">
+						Gets the child elements of each node as a new NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get all list items
+		var items = glow.dom.get("ul, ol").children();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{glow.dom.NodeList}</span> Returns a new NodeList containing all the child nodes</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="clone"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>clone</b>()
+					
+					</div>
+					<div class="description">
+						Clones each node in the NodeList, along with data & event listeners
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// get a copy of all heading elements
+			var myClones = glow.get("h1, h2, h3, h4, h5, h6").clone();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Returns a new NodeList containing clones of all the nodes in
+			the NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="contains"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>contains</b>(Single)
+					
+					</div>
+					<div class="description">
+						Find if this NodeList contains the given element
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLELement | NodeList}</span> <b>Single</b>
+									
+								</dt>
+								<dd>element to check for</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> myElementList.contains(elm)
+		// Returns true if an element in myElementList contains elm, or IS elm.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="copy"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>copy</b>()
+					
+					</div>
+					<div class="description">
+						Copies each node in the NodeList, excluding data & event listeners
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// get a copy of all heading elements
+			var myCopies = glow.get("h1, h2, h3, h4, h5, h6").copy();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Returns a new NodeList containing copies of all the nodes in
+			the NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="css"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | string}</span>
+					<b>css</b>(property, value)
+					
+					</div>
+					<div class="description">
+						Get / set a CSS property value
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get value from first node
+		glow("#subNav").css("display");</pre>
+					
+					<pre class="code">
+		// set left padding to 10px on all nodes
+		glow("#subNav li").css("padding-left", "2em");</pre>
+					
+					<pre class="code">
+		// where appropriate, px is assumed when no unit is passed
+		glow("#mainPromo").css("margin-top", 300);</pre>
+					
+					<pre class="code">
+		// set multiple CSS values at once
+		// NOTE: Property names containing a hyphen such as font-weight must be quoted
+		glow("#myDiv").css({
+			'font-weight': 'bold',
+			'padding'	 : '10px',
+			'color'		 : '#00cc99'
+		});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | Object}</span> <b>property</b>
+									
+								</dt>
+								<dd>The CSS property name, or object of property-value pairs to set</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string | number}</span> <b>value</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The value to apply
+		Number values will be treated as 'px' unless the CSS property
+		accepts a unitless value.
+		
+		If value is omitted, the value for the given property will be returned</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | string}</span> Returns the NodeList when setting value, or the CSS value when getting values.
+		CSS values are strings. For instance, "height" will return
+		"25px" for an element 25 pixels high. You can use
+		parseInt to convert these values.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="data"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Object}</span>
+					<b>data</b>(key, val)
+					
+					</div>
+					<div class="description">
+						Use this to safely attach arbitrary data to any DOM Element.
+	
+	This method is useful when you wish to avoid memory leaks that are possible when adding your own data directly to DOM Elements.
+	
+	When called with no arguments, will return glow's entire data store for the first node in this NodeList.
+	
+	Otherwise, when given a name, will return the associated value from the first node in this NodeList.
+	
+	When given both a name and a value, will store that data on every node in this NodeList.
+	
+	Optionally you can pass in a single object composed of multiple name, value pairs.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">	
+	glow("p").data("tea", "milky");
+	var colour = glow("p").data("tea"); // milky</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string|Object}</span> <b>key</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The name of the value in glow's data store.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Object}</span> <b>val</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The value you wish to associate with the given name.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Object}</span> When setting a value this method can be chained, as in that case it will return itself.</dd>
+							
+							</dl>
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd><a href="../symbols/glow.nodelist.html#removeData">glow.NodeList#removeData</a></dd>
+							
+								<dd><a href="../symbols/glow.nodelist.html#removeData">glow.NodeList#removeData</a></dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="delegate"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>delegate</b>(eventName, selector, callback, thisVal)
+					
+					</div>
+					<div class="description">
+						Listen for an event occurring on child elements matching a selector.
+			'delegate' will catch events which occur on matching items created after
+			the listener was added.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// Using 'on' to catch clicks on links in a list
+			glow.get('#nav a').on('click', function() {
+				// do stuff
+			});
+			
+			// The above adds a listener to each link, any links created later
+			// will not have this listener, so we won't hear about them.
+			
+			// Using 'delegate' to catch clicks on links in a list
+			glow.get('#nav').delegate('click', 'a', function() {
+				// do stuff
+			});
+			
+			// The above only adds one listener to #nav which tracks clicks
+			// to any links within. This includes elements created after 'delegate'
+			// was called.</pre>
+					
+					<pre class="code">
+			// Using delegate to change class names on table rows so :hover
+			// behaviour can be emulated in IE6
+			glow.get('#contactData').delegate('mouseover', 'tr', function() {
+				glow.get(this).addClass('hover');
+			});
+			
+			glow.get('#contactData').delegate('mouseout', 'tr', function() {
+				glow.get(this).removeClass('hover');
+			});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to listen for.
+			This can be any regular DOM event ('click', 'mouseover' etc) or
+			a special event of NodeList.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>selector</b>
+									
+								</dt>
+								<dd>CSS selector of child elements to listen for events on
+			For example, if you were wanting to hear events from links, this
+			would be 'a'.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>Function to call when the event fires.
+			The callback is passed a single event object. The type of this
+			object is glow.DomEvent unless otherwise stated.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Object}</span> <b>thisVal</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Value of 'this' within the callback.
+			By default, this is the dom node matched by 'selector'.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>this</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="destroy"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>destroy</b>()
+					
+					</div>
+					<div class="description">
+						Removes each element from the document
+			The element, attached listeners & attached data will be
+			destroyed to free up memory.
+			
+			Detroyed elements may not be reused in some browsers.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// destroy all links in the document
+			glow("a").destroy();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> An empty NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="detach"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>detach</b>(eventName, callback)
+					
+					</div>
+					<div class="description">
+						detach a listener from elements
+		   This will detach the listener from each dom node in the NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			function clickListener(domEvent) {
+				// ...
+			}
+			
+			// adding listeners
+			glow.get('a').on('click', clickListener);
+			
+			// removing listeners
+			glow.get('a').detach('click', clickListener);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to detach the listener from</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>Listener callback to detach</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>this</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="detachDelegate"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>detachDelegate</b>(eventName, selector, callback)
+					
+					</div>
+					<div class="description">
+						detach a delegated listener from elements
+		   This will detach the listener from each dom node in the NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			function clickListener(domEvent) {
+				// ...
+			}
+			
+			// adding listeners
+			glow.get('#nav').delegate('click', 'a', clickListener);
+			
+			// removing listeners
+			glow.get('#nav').detachDelegate('click', 'a', clickListener);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to detach the listener from</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>selector</b>
+									
+								</dt>
+								<dd>CSS selector of child elements the listener is listening to</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>Listener callback to detach</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>this</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="each"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>each</b>(callback)
+					
+					</div>
+					<div class="description">
+						Calls a function for each node in the list.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// add "link number: x" to each link, where x is the index of the link
+			glow("a").each(function(i, nodeList) {
+				glow(this).append(' link number: ' + i);
+			});</pre>
+					
+					<pre class="code">
+			// breaking out of an each loop
+			glow("a").each(function(i, nodeList) {
+				// do stuff
+				if ( glow(this).hasClass('whatever') ) {
+					// we don't want to process any more links
+					return false;
+				}
+			});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>The function to call for each node.
+			The function will be passed 2 arguments, the index of the current item,
+			and the NodeList being iterated over.
+			
+			Inside the function 'this' refers to the Node.
+			
+			Returning false from this function stops further iterations</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="empty"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>empty</b>()
+					
+					</div>
+					<div class="description">
+						Removes the nodes' contents
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// remove the contents of all textareas
+			glow("textarea").empty();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Original nodes</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="eq"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>eq</b>(nodeList)
+					
+					</div>
+					<div class="description">
+						Compares this NodeList to another
+			Returns true if both NodeLists contain the same items in the same order
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// the following returns true
+			glow('#blah').eq( document.getElementById('blah') );</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Node | Node[] | glow.NodeList}</span> <b>nodeList</b>
+									
+								</dt>
+								<dd>The NodeList to compare to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> </dd>
+							
+							</dl>
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd>for testing if a NodeList item matches a selector</dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="filter"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>filter</b>(test)
+					
+					</div>
+					<div class="description">
+						Filter the NodeList
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// return images with a width greater than 320
+			glow("img").filter(function () {
+				return glow(this).width() > 320;
+			});</pre>
+					
+					<pre class="code">
+			// Get items that don't have an alt attribute
+			myElementList.filter(':not([alt])');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Function|string}</span> <b>test</b>
+									
+								</dt>
+								<dd>Filter test
+			If a string is provided it's treated as a CSS selector. Elements
+			which match the CSS selector are added to the new NodeList.
+			
+			If 'test' is a function, it will be called per node in the NodeList.
+			
+			The function is passed 2 arguments, the index of the current item,
+			and the ElementList being itterated over.
+			
+			Inside the function 'this' refers to the node.
+			Return true to add the element to the new NodeList.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> A new NodeList containing the filtered nodes</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="fire"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>fire</b>(eventName, event)
+					
+					</div>
+					<div class="description">
+						Fire an event on dom nodes within the NodeList
+		   Note, this will only trigger event listeners to be called, it won't
+		   for example, move the mouse or click a link on the page.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		   glow.get('#testLink').on('click', function() {
+			   alert('Link clicked!');
+		   });
+		   
+		   // The following causes 'Link clicked!' to be alerted, but doesn't
+		   // cause the browser to follow the link
+		   glow.get('#testLink').fire('click');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to fire</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.event.html">glow.events.Event</a>}</span> <b>event</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Event object to pass into listeners.
+		   You can provide a simple object of key / value pairs which will
+		   be added as properties of a glow.events.Event instance.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>glow.events.Event</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="get"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>get</b>(selector)
+					
+					</div>
+					<div class="description">
+						Gets decendents of nodes that match a CSS selector.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// create a new NodeList
+		var myNodeList = glow.dom.create("<div><a href='s.html'>Link</a></div>");
+
+		// get 'a' tags that are decendants of the NodeList nodes
+		myNewNodeList = myNodeList.get("a");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>selector</b>
+									
+								</dt>
+								<dd>CSS selector</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Returns a new NodeList containing matched elements</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="hasAttr"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean|undefined}</span>
+					<b>hasAttr</b>(name)
+					
+					</div>
+					<div class="description">
+						Does the node have a particular attribute?
+		
+		The first node in this NodeList is tested.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		if ( glow("#myImg").hasAttr("alt") ){
+			// ...
+		}</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the attribute to test for.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean|undefined}</span> Returns undefined if the first node is not an element,
+	or if the NodeList is empty, otherwise returns true/false to indicate if that attribute exists
+	on the first element.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="hasClass"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>hasClass</b>(name)
+					
+					</div>
+					<div class="description">
+						Does the node have a particular class?
+
+		The first node in this NodeList is tested.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		if ( glow("#myInput").hasClass("errored") ){
+			// ...
+		}</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the class to test for.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="height"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span>
+					<b>height</b>(height)
+					
+					</div>
+					<div class="description">
+						Gets / set element height
+		Return value does not include the padding or border of the element in
+		browsers supporting the correct box model.
+			
+		You can use this to easily get the height of the document or
+		window, see example below.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get the height of #myDiv
+		glow("#myDiv").height();</pre>
+					
+					<pre class="code">
+		// set the height of list items in #myList to 200 pixels
+		glow("#myList > li").height(200);</pre>
+					
+					<pre class="code">
+		// get the height of the document
+		glow(document).height();</pre>
+					
+					<pre class="code">
+		// get the height of the window
+		glow(window).height();</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Number}</span> <b>height</b>
+									<i>Optional</i>
+								</dt>
+								<dd>New height in pixels for each element in the list
+		If ommited, the height of the first element is returned</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span> Height of first element, or original NodeList when setting heights.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="hide"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>hide</b>()
+					
+					</div>
+					<div class="description">
+						Hides all items in the NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// Hides all list items within #myList
+		glow("#myList li").hide();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="html"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | string}</span>
+					<b>html</b>(htmlString)
+					
+					</div>
+					<div class="description">
+						Gets / sets HTML content
+			Either gets content of the first element, or sets the content
+			for all elements in the list
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// get the html in #footer
+			var footerContents = glow("#footer").html();</pre>
+					
+					<pre class="code">
+			// set a new footer
+			glow("#footer").html("<strong>Hello World!</strong>");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>htmlString</b>
+									<i>Optional</i>
+								</dt>
+								<dd>String to set as the HTML of elements
+			If omitted, the html for the first element in the list is
+			returned.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | string}</span> Returns the original NodeList when setting,
+			or the HTML content when getting.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="insertAfter"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>insertAfter</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Insert this NodeList after the given nodes
+			If inserting after more than one node, the NodeList is inserted
+			after the first node and clones are inserted after the others.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// adds a paragraph after each heading
+			glow('<p>HAI!</p>').insertAfter('h1, h2, h3');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Node(s) to insert after
+			Strings will be treated as CSS selectors.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Inserted nodes.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="insertBefore"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>insertBefore</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Insert this NodeList before the given nodes
+			If inserting before more than one node, the NodeList is inserted
+			before the first node and clones are inserted before the others.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// adds a div before each paragraph
+			glow('<div>Here comes a paragraph!</div>').insertBefore('p');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Node(s) to insert before
+			Strings will be treated as CSS selectors.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Inserted nodes.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="is"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{boolean}</span>
+					<b>is</b>(selector)
+					
+					</div>
+					<div class="description">
+						Tests if the first element matches a CSS selector
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			if ( myNodeList.is(':visible') ) {
+				// ...
+			}</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>selector</b>
+									
+								</dt>
+								<dd>CSS selector</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{boolean}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="item"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>item</b>(index)
+					
+					</div>
+					<div class="description">
+						Get a single item from the list as an NodeList
+			Negative numbers can be used to get items from the end of the
+			list.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// get the html from the fourth element
+			myNodeList.item(3).html();</pre>
+					
+					<pre class="code">
+			// add a class name to the last item
+			myNodeList.item(-1).addClass('last');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>index</b>
+									
+								</dt>
+								<dd>The numeric index of the node to return.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> A new NodeList containing a single item</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="next"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{glow.ElementList}</span>
+					<b>next</b>(search)
+					
+					</div>
+					<div class="description">
+						Gets the next sibling element for each node in the ElementList.
+		If a filter is provided, the next item that matches the filter is returned, or
+		none if no match is found.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// gets the element following #myLink (if there is one)
+		var next = glow.get("#myLink").next();</pre>
+					
+					<pre class="code">
+		// get the next sibling link element after #skipLink
+		glow.get('#skipLink').next('a')</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | NodeList}</span> <b>search</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Search value
+		If provided, will seek the next sibling element until a match is found</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{glow.ElementList}</span> A new ElementList containing the next sibling elements that match the (optional)
+		filter.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="offset"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Object}</span>
+					<b>offset</b>()
+					
+					</div>
+					<div class="description">
+						Gets the offset from the top left of the document.
+		If the NodeList contains multiple items, the offset of the
+		first item is returned.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		glow("#myDiv").offset().top</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Object}</span> Returns an object with "top" & "left" properties in pixels</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="on"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>on</b>(eventName, callback, thisVal)
+					
+					</div>
+					<div class="description">
+						Listen for an event.
+		   This will listen for a particular event on each dom node
+		   in the NodeList.
+		   
+		   If you're listening to many children of a particular item,
+		   you may get better performance from <a href="../symbols/glow.nodelist.html#delegate">glow.NodeList#delegate</a>.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		   glow.get('#testLink').on('click', function(domEvent) {
+			   // do stuff
+			   
+			   // if you want to cancel the default action (following the link)...
+			   return false;
+		   });</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to listen for.
+		   This can be any regular DOM event ('click', 'mouseover' etc) or
+		   a special event of NodeList.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>Function to call when the event fires.
+		   The callback is passed a single event object. The type of this
+		   object is glow.DomEvent unless otherwise stated.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Object}</span> <b>thisVal</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Value of 'this' within the callback.
+		   By default, this is the dom node being listened to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd>this</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="parent"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>parent</b>(search)
+					
+					</div>
+					<div class="description">
+						Gets the unique parent nodes of each node as a new NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// elements which contain links
+		var parents = glow.dom.get("a").parent();</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | NodeList}</span> <b>search</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Search value
+		If provided, will seek the next parent element until a match is found</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Returns a new NodeList containing the parent nodes, with
+		duplicates removed</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="position"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Object}</span>
+					<b>position</b>()
+					
+					</div>
+					<div class="description">
+						Get the top & left position of an element relative to its positioned parent
+		This is useful if you want to make a position:static element position:absolute
+		and retain the original position of the element
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get the top distance from the positioned parent
+		glow("#elm").position().top</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Object}</span> An object with 'top' and 'left' number properties</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="prepend"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>prepend</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Prepends nodes to each node in this NodeList.
+			If there is more than one node in this NodeList, then the given nodes
+			are prepended to the first node and clones are prepended to the other
+			nodes.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// prepends every paragraph with 'Paragraph: '
+			glow('p').prepend('<span>Paragraph: </span>');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Nodes(s) to prepend
+			Strings will be treated as HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> Original NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="prependTo"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>prependTo</b>(node)
+					
+					</div>
+					<div class="description">
+						Prepends nodes in this NodeList to given node(s)
+			If prepending to more than one node, the NodeList is prepended
+			to the first node and clones are prepended to the others.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// prepends 'Paragraph: ' to every paragraph
+			glow('<span>Paragraph: </span>').prependTo('p');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>node</b>
+									
+								</dt>
+								<dd>Node(s) to prepend to
+			Strings will be treated as CSS selectors or HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> The prepended nodes.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="prev"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{glow.ElementList}</span>
+					<b>prev</b>(search)
+					
+					</div>
+					<div class="description">
+						Gets the previous sibling element for each node in the ElementList.
+		If a filter is provided, the previous item that matches the filter is returned, or
+		none if no match is found.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// gets the element before #myLink (if there is one)
+		var next = glow.get("#myLink").prev();</pre>
+					
+					<pre class="code">
+		// get the previous sibling link element before #skipLink
+		glow.get('#skipLink').prev('a')</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | NodeList}</span> <b>search</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Search value
+		If provided, will seek the previous sibling element until a match is found</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{glow.ElementList}</span> A new ElementList containing the previous sibling elements that match the (optional)
+		filter.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="prop"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{string | glow.NodeList}</span>
+					<b>prop</b>(name, value)
+					
+					</div>
+					<div class="description">
+						Gets or sets node properties.
+	
+		This function gets / sets node properties, to get attributes,
+		see {@link glow.NodeList#attr NodeList#attr}.
+		
+		When getting a property, it is retrieved from the first
+		node in this NodeList. Setting properties to each element in
+		this NodeList.
+		
+		To set multiple properties in one call, pass in an object of
+		name/value pairs.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		var myNodeList = glow("#formElement");
+
+		// get the node name
+		myNodeList.prop("nodeName");
+
+		// set a property
+		myNodeList.prop("_secretValue", 10);
+
+		// set multiple properties
+		myNodeList.prop({
+			checked: true,
+			_secretValue: 10
+		});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | Object}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the property, or an object of name/value pairs</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>value</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The value to set the property to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{string | glow.NodeList}</span> When setting properties it returns the NodeList, otherwise
+		returns the property value.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="push"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>push</b>(nodes)
+					
+					</div>
+					<div class="description">
+						Adds nodes to the NodeList
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			myNodeList.push('<div>Foo</div>').push('h1');</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | Node | Node[] | glow.NodeList}</span> <b>nodes</b>
+									
+								</dt>
+								<dd>Node(s) to add to the NodeList
+			Strings will be treated as CSS selectors or HTML strings.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="remove"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>remove</b>()
+					
+					</div>
+					<div class="description">
+						Removes each element from the document
+			If you no longer need the elements, consider using
+			{@link glow.NodeList#destroy destroy}
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// take all the links out of a document
+			glow("a").remove();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> The removed elements</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="removeAttr"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>removeAttr</b>(name)
+					
+					</div>
+					<div class="description">
+						Removes an attribute from each node.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		glow("a").removeAttr("target");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the attribute to remove.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="removeClass"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>removeClass</b>(name)
+					
+					</div>
+					<div class="description">
+						Removes a class from each node.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		glow("#footer #login a").removeClass("highlight");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the class to remove.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="removeData"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>removeData</b>(key)
+					
+					</div>
+					<div class="description">
+						Removes data previously added by <a href="../symbols/glow.nodelist.html#data">glow.NodeList#data</a> from each node in this NodeList.
+	
+	When called with no arguments, will delete glow's entire data store for each node in this NodeList.
+	
+	Otherwise, when given a name, will delete the associated value from each node in this NodeList.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>key</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The name of the value in glow's data store.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd><a href="../symbols/glow.nodelist.html#data">glow.NodeList#data</a></dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name="replaceWith"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>replaceWith</b>(elements)
+					
+					</div>
+					<div class="description">
+						Replace elements with another
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>elements</b>
+									
+								</dt>
+								<dd>Element(s) to insert into the document
+			If there is more than one element in the NodeList, then the given elements
+			replace the first element, clones are appended to the other	elements.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> The replaced elements
+			Call {@link glow.NodeList#destroy destroy} on these if you
+			no longer need them.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="scrollLeft"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span>
+					<b>scrollLeft</b>(val)
+					
+					</div>
+					<div class="description">
+						Gets/sets the number of pixels the element has scrolled horizontally
+		To get/set the scroll position of the window, use this method on
+		a nodelist containing the window object.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get the scroll left value of #myDiv
+		var scrollPos = glow("#myDiv").scrollLeft();
+		// scrollPos is a number, eg: 45</pre>
+					
+					<pre class="code">
+		// set the scroll left value of #myDiv to 20
+		glow("#myDiv").scrollLeft(20);</pre>
+					
+					<pre class="code">
+		// get the scrollLeft of the window
+		glow(window).scrollLeft();
+		// scrollPos is a number, eg: 45</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Number}</span> <b>val</b>
+									<i>Optional</i>
+								</dt>
+								<dd>New left scroll position
+		Omit this to get the current scroll position</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span> Current scrollLeft value, or NodeList when setting scroll position.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="scrollTop"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span>
+					<b>scrollTop</b>(val)
+					
+					</div>
+					<div class="description">
+						Gets/sets the number of pixels the element has scrolled vertically
+		To get/set the scroll position of the window, use this method on
+		a nodelist containing the window object.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get the scroll top value of #myDiv
+		var scrollPos = glow("#myDiv").scrollTop();
+		// scrollPos is a number, eg: 45</pre>
+					
+					<pre class="code">
+		// set the scroll top value of #myDiv to 20
+		glow("#myDiv").scrollTop(20);</pre>
+					
+					<pre class="code">
+		// get the scrollTop of the window
+		glow(window).scrollTop();
+		// scrollPos is a number, eg: 45</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Number}</span> <b>val</b>
+									<i>Optional</i>
+								</dt>
+								<dd>New top scroll position
+		Omit this to get the current scroll position</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span> Current scrollTop value, or NodeList when setting scroll position.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="show"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>show</b>()
+					
+					</div>
+					<div class="description">
+						Shows all hidden items in the NodeList.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// Show element with ID myDiv
+		glow("#myDiv").show();</pre>
+					
+					<pre class="code">
+		// Show all list items within #myList
+		glow("#myList li").show();</pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="slice"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>slice</b>(start, end)
+					
+					</div>
+					<div class="description">
+						Get a section of an NodeList
+			Operates in the same way as an Array's slice method
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		var myNodeList = glow("<div></div><p></p>");
+		myNodeList.slice(1, 2); // selects the paragraph
+		myNodeList.slice(-1); // same thing, selects the paragraph</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>start</b>
+									
+								</dt>
+								<dd>Start index
+			If negative, it specifies a position measured from the end of the list</dd>
+							
+								<dt>
+									<span class="light fixedFont">{number}</span> <b>end</b>
+									<i>Optional</i>
+								</dt>
+								<dd>End index
+			By default, this is the end of the list. A negative end specifies
+			a position measured from the end of the list.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> A new sliced NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="sort"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>sort</b>(func)
+					
+					</div>
+					<div class="description">
+						Sort the elements in the list.
+			Items will already be in document order if a CSS selector
+			was used to fetch them.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			//get links in alphabetical (well, lexicographical) order
+			var links = glow("a").sort(function(elementA, elementB) {
+				return glow(elementA).text() < glow(elementB).text() ? -1 : 1;
+			})</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Function}</span> <b>func</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Function to determine sort order
+			This function will be passed 2 elements (elementA, elementB). The function
+			should return a number less than 0 to sort elementA lower than elementB
+			and greater than 0 to sort elementA higher than elementB.
+			
+			If no function is provided, elements will be sorted in document order.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> A new sorted NodeList</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="text"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | String}</span>
+					<b>text</b>(text)
+					
+					</div>
+					<div class="description">
+						Gets / set the text content
+			Either gets content of the first element, or sets the content
+			for all elements in the list
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// set text
+			var div = glow("<div></div>").text("Fun & games!");
+			// <div>Func &amp; games!</div></pre>
+					
+					<pre class="code">
+			// get text
+			var mainHeading = glow('#mainHeading').text();</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>text</b>
+									<i>Optional</i>
+								</dt>
+								<dd>String to set as the text of elements
+			If omitted, the test for the first element in the list is
+			returned.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | String}</span> Returns the original NodeList when setting,
+			or the text content when getting.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="toggleClass"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>toggleClass</b>(name)
+					
+					</div>
+					<div class="description">
+						Toggles a class on each node.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		glow(".onOffSwitch").toggleClass("on");</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>The name of the class to toggle.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> </dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="unwrap"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>unwrap</b>()
+					
+					</div>
+					<div class="description">
+						Removes the parent of each item in the list
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// Before: <div><p><span id="mySpan">Hello</span></p></div>
+			// unwrap the given element
+			glow("#mySpan").unwrap();
+			// After: <div><span id="mySpan">Hello</span></div></pre>
+					
+					
+					
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> The now unwrapped elements</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="val"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{glow.dom.NodeList | String | Object}</span>
+					<b>val</b>(value)
+					
+					</div>
+					<div class="description">
+						Gets or sets form values for the first node.
+
+		<p><em>This method is not applicable to XML NodeLists.</em></p>
+
+		<p><em>Getting values from form elements</em></p>
+
+		The returned value depends on the type of element, see below:
+
+		<dl>
+		<dt>Radio button or checkbox</dt>
+		<dd>If checked, then the contents of the value attribute, otherwise an empty string.</dd>
+		<dt>Select</dt>
+		<dd>The contents of value attribute of the selected option</dd>
+		<dt>Select (multiple)</dt>
+		<dd>An array of selected option values.</dd>
+		<dt>Other form element</dt>
+		<dd>The value of the input.</dd>
+		</dl>
+
+		<p><em>Getting values from a form</em></p>
+
+		If the first element in the NodeList is a form, then an
+		object is returned containing the form data. Each item
+		property of the object is a value as above, apart from when
+		multiple elements of the same name exist, in which case the
+		it will contain an array of values.
+
+		<p><em>Setting values for form elements</em></p>
+
+		If a value is passed and the first element of the NodeList
+		is a form element, then the form element is given that value.
+		For select elements, this means that the first option that
+		matches the value will be selected. For selects that allow
+		multiple selection, the options which have a value that
+		exists in the array of values/match the value will be
+		selected and others will be deselected.
+
+		Currently checkboxes and radio buttons are not checked or
+		unchecked, just their value is changed. This does mean that
+		this does not do exactly the reverse of getting the value
+		from the element (see above) and as such may be subject to
+		change
+
+		<p><em>Setting values for forms</em></p>
+
+		If the first element in the NodeList is a form and the
+		value is an object, then each element of the form has its
+		value set to the corresponding property of the object, using
+		the method described above.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">		// get a value
+		var username = glow.dom.get("input#username").val();</pre>
+					
+					<pre class="code">		
+		/ get values from a form
+		var userDetails = glow.dom.get("form").val();</pre>
+					
+					<pre class="code">		// set a value
+		glow.dom.get("input#username").val("example username");</pre>
+					
+					<pre class="code">		// set values in a form
+		glow.dom.get("form").val({
+			username : "another",
+			name     : "A N Other"
+		});</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String | Object}</span> <b>value</b>
+									<i>Optional</i>
+								</dt>
+								<dd>The value to set the form element/elements to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{glow.dom.NodeList | String | Object}</span> When used to set a value it returns the NodeList, otherwise
+		returns the value as described above.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="width"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span>
+					<b>width</b>(width)
+					
+					</div>
+					<div class="description">
+						Gets / set element width
+		Return value does not include the padding or border of the element in
+		browsers supporting the correct box model.
+			
+		You can use this to easily get the width of the document or
+		window, see example below.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+		// get the width of #myDiv
+		glow("#myDiv").width();</pre>
+					
+					<pre class="code">
+		// set the width of list items in #myList to 200 pixels
+		glow("#myList > li").width(200);</pre>
+					
+					<pre class="code">
+		// get the width of the document
+		glow(document).width();</pre>
+					
+					<pre class="code">
+		// get the width of the window
+		glow(window).width();</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Number}</span> <b>width</b>
+									<i>Optional</i>
+								</dt>
+								<dd>New width in pixels for each element in the list
+		If ommited, the width of the first element is returned</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a> | number}</span> width of first element, or original NodeList when setting widths.</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="wrap"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span>
+					<b>wrap</b>(wrapper)
+					
+					</div>
+					<div class="description">
+						Wraps the given NodeList with the specified element(s).
+			The given NodeList items will always be placed in the first
+			child element that contains no further elements.
+			
+			Each item in a given NodeList will be wrapped individually.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">
+			// <span id="mySpan">Hello</span>
+			glow("#mySpan").wrap("<div><p></p></div>");
+			// Makes:
+			// <div>
+			//     <p>
+			//         <span id="mySpan">Hello</span>
+			//     </p>
+			// </div></pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{string | HTMLElement | HTMLElement[] | glow.NodeList}</span> <b>wrapper</b>
+									
+								</dt>
+								<dd>Element to use as a wrapper
+			Strings will be treated as HTML strings if they begin with <, else
+			they'll be treated as a CSS selector.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{<a href="../symbols/glow.nodelist.html">glow.NodeList</a>}</span> The NodeList with new wrapper parents</dd>
+							
+							</dl>
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+				<div class="sectionTitle">
+					Event Detail
+				</div>
+				
+					<a name="event:keydown"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>keydown</b>(event)
+					
+					</div>
+					<div class="description">
+						Fires when the user presses a key
+			Only fires if the element has focus, listen for this event on
+			the document to catch all keydowns.
+			
+			This event related to the user pressing a key on the keyboard,
+			if you're more concerned about the character entered, see the
+			{@link glow.NodeList#event:keypress keypress} event.
+			
+			keydown will only fire once, when the user presses the key.
+			
+			The order of events is keydown, keypress*, keyup. keypress may
+			fire many times if the user holds the key down.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.keyboardevent.html">glow.events.KeyboardEvent</a>}</span> <b>event</b>
+									
+								</dt>
+								<dd>Event Object</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="event:keypress"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>keypress</b>(event)
+					
+					</div>
+					<div class="description">
+						Fires when a key's command executes.
+			For instance, if you hold down a key, it's action will occur many
+			times. This event will fire on each action.
+			
+			This event is useful when you want to react to keyboard repeating, or
+			to detect when a character is entered into a field.
+			
+			The order of events is keydown, keypress*, keyup. keypress may
+			fire many times if the user holds the key down.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.keyboardevent.html">glow.events.KeyboardEvent</a>}</span> <b>event</b>
+									
+								</dt>
+								<dd>Event Object</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="event:keyup"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>keyup</b>(event)
+					
+					</div>
+					<div class="description">
+						Fires when the user releases a key
+			Only fires if the element has focus, listen for this event on
+			the document to catch all keyups.
+			
+			This event related to the user pressing a key on the keyboard,
+			if you're more concerned about the character entered, see the
+			{@link glow.NodeList#event:keypress keypress} event.
+			
+			The order of events is keydown, keypress*, keyup. keypress may
+			fire many times if the user holds the key down.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.keyboardevent.html">glow.events.KeyboardEvent</a>}</span> <b>event</b>
+									
+								</dt>
+								<dd>Event Object</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="event:mouseenter"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>mouseenter</b>(event)
+					
+					</div>
+					<div class="description">
+						Fires when the mouse enters the element specifically, does not bubble
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.domevent.html">glow.events.DomEvent</a>}</span> <b>event</b>
+									
+								</dt>
+								<dd>Event Object</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name="event:mouseleave"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>mouseleave</b>(event)
+					
+					</div>
+					<div class="description">
+						Fires when the mouse leaves the element specifically, does not bubble
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.domevent.html">glow.events.DomEvent</a>}</span> <b>event</b>
+									
+								</dt>
+								<dd>Event Object</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.3.2 on Wed Mar 03 2010 14:15:24 GMT-0000 (GMT)
+		</div>
+	</body>
+</html>

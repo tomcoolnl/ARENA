@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB">
+<head profile="http://dublincore.org/documents/dcq-html/">
+
+	<title> socketBridge: Flash - Javascript Socket Bridge &raquo;  Matt Haynes - Programming &amp; Tech Blog</title>
+	
+	<meta name="verify-v1" content="xovWkED3LNiudzGlTdK+mcPkIaJ/G/1wqFNrrXEdeSM=" />
+	<meta name="generator" content="WordPress 2.6.2" /> <!-- leave this for stats -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	
+				<meta name="googlebot" content="index,noarchive,follow,noodp" />
+		<meta name="robots" content="all,index,follow" />
+		<meta name="msnbot" content="all,index,follow" />
+		
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc-rsd.php.html" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 2.6.2" />
+
+<style type="text/css">.addtoany_share_save img{border:0;}</style>
+<meta name="description" content="Connect to a Socket Server via Javascript. Socket Bridge is a small Flash application that allows you to communicate with a socket server via Javascript. " />
+	
+	<script type="text/javascript" src="../../../../../js/swfobject.js"></script>
+	
+	<!-- Syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../../js/syntax_highlighter/SyntaxHighlighter.css"></link>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shCore.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushXml.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushRuby.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushCss.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushSql.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushJava.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushCpp.js"></script>
+	<script type="text/javascript" src="../../../../../js/syntax_highlighter/shBrushPhp.js"></script>
+	
+	
+	
+	<link rel="stylesheet" href="../../../../wp-content/themes/matthaynes.net/style.css" type="text/css" media="screen" />
+	<link rel="alternate" type="application/rss+xml" title="Matt Haynes - Programming &amp; Tech Blog" href="../../../../feed/index.html" />
+	<link rel="pingback" href="../../../../xmlrpc.php.html" />
+
+</head>
+<body>
+<div id="page">
+
+	<div id="header">
+	
+		<div id="hmenu">
+			<ul>
+				<li class="hmenu1"><a href="../../../../index.html">Home</a></li>
+				<li><a href="../../../../about/index.html">About</a></li>				
+
+<!--				<li class="page_item page-item-2"><a href="http://matthaynes.net/blog/about/" title="not nearly finished yet.">not nearly finished yet.</a></li>
+-->
+			</ul>
+		</div>
+		
+		<h1 id="headertitle"><a href="../../../../index.html" title="Matt Haynes - Programming &amp; Tech Blog: An infrequent blog about the internet, programming and related technology">Matt Haynes - Programming &amp; Tech Blog</a></h1>
+		
+		<!--
+		<p>An infrequent blog about the internet, programming and related technology</p>
+-->
+			
+	</div>
+
+
+
+	<div id="content">
+
+			
+		<div class="navigation">
+			<div class="alignleft">&laquo; <a href="../../../06/06/adobe-on-air-tour-berlin-2008/index.html">Adobe On AIR Tour Berlin 2008</a></div>
+			<div class="alignright"><a href="../../../08/03/javascript-space-invaders/index.html">Javascript Space Invaders</a> &raquo;</div>
+		</div>
+
+		<div class="post" id="post-17">
+
+			<div class="date">
+				<div class="month">
+					Jul <!-- by matth -->
+				</div>
+				<div class="day">
+					17 <!-- by matth -->					
+				</div>					
+				<div class="year">
+					2008 <!-- by matth -->					
+				</div>					
+			</div>	
+			
+			<!-- google_ad_section_start -->
+			
+			<h1 class="posttitle"><a href="index.html" rel="bookmark" title="Permanent Link to socketBridge: Flash - Javascript Socket Bridge">socketBridge: Flash - Javascript Socket Bridge</a></h1>
+
+			<div class="postentry">
+				<p><script src="../../../../../js/socket_bridge_example.js" type="text/javascript"></script></p>
+<p class="update">
+<strong>Update: 5 May 2009</strong><br />
+This post has generated a (relatively) large amount of interest so I feel I should point out the ionel is also hosting his improved version of the socketBridge. It has a nicer OO interface and might solve some issues with the javascript callbacks and setTimeouts. Might be worth a peek for all those interested: <a href="http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/" onclick="javascript:pageTracker._trackPageview('a/http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/');">http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/</a>
+</p>
+<p>I&#8217;ve been looking at a few flash - javascript socket server bridges recently with the hope of using one to allow me to speak to my <a href="http://arduino.cc" onclick="javascript:pageTracker._trackPageview('a/http://arduino.cc');">Arduino</a> via javascript. I&#8217;ve ended up writing my own one here - it&#8217;s usually more fun that way, and I can get it to do exactly what I need. However, there&#8217;s a couple of good options out there that you might<br />
+also want to check out:</p>
+<p><strong><a href="http://dev.dschini.org/socketjs/" onclick="javascript:pageTracker._trackPageview('a/http://dev.dschini.org/socketjs/');">SocketJS</a></strong> - Seems to work well and has a nice low file size. The only problem I had with it is that is does not easily allow for object oriented javascript as all of the callbacks are done at the global scope.</p>
+<p><strong><a href="http://code.google.com/p/jssockets/" onclick="javascript:pageTracker._trackPageview('a/http://code.google.com/p/jssockets/');">jssockets</a></strong> - Nice object oriented interface available here although the function called when the SWF is loaded is still in the global scope. Also this project uses Flex which makes the files size around 120+ KB, a little too large when compared with SocketJS&#8217;s ~3KB.</p>
+<p>My version is called socketBridge, I think it does most of the things I wanted, mainly allowing for use of object oriented javascript throughout. I also avoided using Flex which kept the filesize nice and low. I&#8217;m still not 100% sure about the code quality as this is my first Flash project, prior to this I&#8217;d not written any ActionScript at all. To be honest I didn&#8217;t even write any here, it was all done using <a href="http://haxe.org/" onclick="javascript:pageTracker._trackPageview('a/http://haxe.org/');">haxe</a>.</p>
+<p><span id="more-17"></span></p>
+<p>I ran into a few issues with Flash&#8217;s ExternalInterface, it seems lock up the SWF whilst waiting for the javascript callbacks to return. This posed a bit of a problem when I wanted to do something like have the SWF tell the javascript that it&#8217;s loaded and then have that same callback ask the SWF to open a socket connection. The SWF wouldn&#8217;t be able to hear my javascript as it had halted whilst waiting for the <code>loaded</code> callback to return!</p>
+<p>I found a way around this by wrapping all the callbacks from Flash in a <code>setTimeout</code> method. This effectively opens a new javascript thread and as such straight away returns the original callback. I <a href="http://www.calypso88.com/?p=25" onclick="javascript:pageTracker._trackPageview('a/http://www.calypso88.com/?p=25');">picked up this tip here</a>.</p>
+<p>Feel free to <a href="../../../../../flash/socket_bridge.swf">download the bridge swf</a> or alternatively grab the <a href="../../../../../flash/socket_bridge.zip">haxe source</a>. It should all be pretty straight forward from a client side point of view.</p>
+<p>If this is your first attempt at communicating with a Flash socket server then you may run into a few pitfalls. Flash seems to have some varying security policies depending on the player version, I won&#8217;t pretend to understand them all here but Adobe does a pretty <a href="http://www.adobe.com/devnet/flashplayer/articles/fplayer9_security_04.html" onclick="javascript:pageTracker._trackPageview('a/http://www.adobe.com/devnet/flashplayer/articles/fplayer9_security_04.html');"> good job here</a>.</p>
+<h3>SocketBridge - connect to your server</h3>
+<form action="#" onsubmit="return false">
+<fieldset><label for="ip_address">IP Address:</label><br />
+<input class="textbox" id="ip_address" type="text" size="18" /><label for="port">Port Number:</label><br />
+<input id="port" size="4"  class="textbox" type="text" />
+<input  class="button" value="Connect" onclick="myObject.connect(document.getElementById('ip_address').value, document.getElementById('port').value)" type="button" />
+<input  class="button" value="Disconnect" onclick="myObject.close()" type="button" />
+<p id="socketBridge_output">&nbsp;</p>
+<p id="flashcontent">&nbsp;</p>
+<p><label for="text">Write Message to server:</label></p>
+<input id="text" type="text"  class="textbox" />
+<input onclick="myObject.write(document.getElementById('text').value)" value="Send" type="button"    class="button" />
+</fieldset></form>
+<p><script type="text/javascript"> 	
+so = new SWFObject("/flash/socket_bridge.swf", "socketBridge", "400", "300", "8", "#ffffff"); 	so.addVariable("scope", "myObject"); 	so.addParam("allowscriptaccess", "always");    	so.write("flashcontent"); 
+</script></p>
+<h3>Download</h3>
+<ul>
+<li><a href="../../../../../flash/socket_bridge.swf">socketBridge: Flash - Javascript Socket Bridge SWF</a></li>
+<li><a href="../../../../../flash/socket_bridge.zip">socketBridge: Flash - Javascript Socket Bridge SRC</a></li>
+</ul>
+<h3>Usage</h3>
+<p>Include the SWF in your page using something like swfobject.</p>
+<pre name="code" class="javascript">
+	so = new SWFObject("/path/to/socket_bridge.swf", "socketBridge", "400", "300", "9", "#ffffff");
+	so.addParam("allowscriptaccess", "always");
+	so.write("flashcontent");</pre>
+<p>The flash movie outputs messages such as what&#8217;s being sent and received, you can pick these up with the javascript callbacks though. Best just to get rid of the swf from the HTML page.</p>
+<pre name="code" class="css">
+	#socketBridge {position:absolute;top:-1000px;}</pre>
+<h3>Methods</h3>
+<h4>connect(<em>host</em>, <em>port</em>)</h4>
+<p>Opens a new socket connection.</p>
+<pre name="code" class="javascript">
+	var socket = document.getElementById("socketBridge");
+	socket.connect("localhost", "5000");
+</pre>
+<h4>write(<em>msg</em>)</h4>
+<p>Sends a string to the current socket server connection.</p>
+<pre name="code" class="javascript">
+	socket.write("Hello socket server");
+</pre>
+<h4>close()</h4>
+<p>Closes the current socket server connection.</p>
+<pre name="code" class="javascript">
+	socket.clsoe();
+</pre>
+<h3>Callbacks</h3>
+<p>The socket bridge SWF communicates to a series of javascript callbacks.<br />
+By default all callbacks are made to the global scope, however the socket bridge SWF can be provided with an optional <code>scope</code> flash var when being included. If used this should be a javascript namespace or object that enapsulates the callback functions the socket bridge uses.</p>
+<pre name="code" class="javascript">
+   so.addVariable("scope", "myObject");
+   // Callbacks will now all be in the scope of myObject
+   // myObject.<em>callback()</em>
+</pre>
+<h4>loaded()</h4>
+<p>Called once the SWF has been loaded, after this call it is safe to open a socket connection.</p>
+<h4>connected()</h4>
+<p>Called once a connection with a socket server has been successfully estabished.</p>
+<h4>disconnected()</h4>
+<p>Called when the cuurent connection is closed.</p>
+<h4>ioError(error_message)</h4>
+<p>Called when an IO Error occurs with the current connection.</p>
+<h4>securityError(error_message)</h4>
+<p>Called when a security Error occurs with the current connection. Flash seems to have varying security policies depending on the player version.</p>
+<h4>receive(message)</h4>
+<p>Called when a new message is received from a socket server</p>
+<h3>Example</h3>
+<p>Below is an example of setting up a scoped object to communicate with the socket bridge</p>
+<pre name="code" class="javascript">
+// Object to encapsulate callbacks and communicate with socket bridge
+
+var myObject = {
+
+    // Socket bridge callback functions
+
+    loaded : function() {
+        // SWF loaded OK, ready to connect
+        this.flashMovie = document.getElementById("flashMovie");
+        this.connect();
+    },
+
+    connected : function() {
+        // Code that you want executing after a succesful connection
+    },
+
+    disconnected : function() {
+        // Code that you want executing after a disconnection
+    },				
+
+   ioError: function(msg) {
+        // Code that you want executing after an IO error
+    },						
+
+    securityError: function(msg) {
+        // Code that you want executing after a security erro
+    },								
+
+    receive: function(msg) {
+        // Code that you want executing after we've received some data
+        alert("Received from the socket server: " + msg);
+    },
+
+    // Functions to communicate with socket bridge		
+
+    connect : function(server, port) {
+        // Connect to server
+        // EG: this.flashMovie.connect("localhost", "5001");
+        this.flashMovie.connect(server, port);
+    },
+
+    close : function() {
+        this.flashMovie.close()
+    },
+
+    write : function(msg) {
+        this.flashMovie.write(msg);
+    }	
+
+};			
+
+// Include socket bridge SWF
+
+so = new SWFObject("/path/to/socket_bridge.swf", "socketBridge", "400", "300", "9", "#ffffff");
+so.addParam("allowscriptaccess", "always");
+so.addVariable("scope", "myObject");
+so.write("flashcontent");
+</pre>
+							</div>
+			
+			<!-- google_ad_section_end -->
+		
+			<div class="postmetadata">
+				<h4>What next?</h4>
+				<ul>
+					<li>Comment: <a href="#respond">comment</a> (<a href='feed/index.html'>RSS</a>)</li>					<li>Blog: <a href="trackback/index.html " rel="trackback">trackback</a></li>					<li>Bookmarks: 
+    <a class="a2a_dd addtoany_share_save" onmouseover="a2a_show_dropdown(this)" onmouseout="a2a_onMouseOut_delay()" href="http://www.addtoany.com/share_save?sitename=Matt%20Haynes%20-%20Programming%20&amp;%20Tech%20Blog&siteurl=http://matthaynes.net/blog/&linkname=socketBridge:%20Flash%20-%20Javascript%20Socket%20Bridge&linkurl=http://matthaynes.net/blog/2008/07/17/socketbridge-flash-javascript-socket-bridge/">share / save</a>
+
+	</li>					<li>More from: <a href="../../../../category/programming/index.html" title="View all posts in programming" rel="category tag">programming</a></li>
+																
+				</ul>
+
+				 <div class="googleAdsense">
+				 
+					<script type="text/javascript"><!--
+						google_ad_client = "pub-2080466711284061";
+						/* 468x60, created 7/21/08 */
+						google_ad_slot = "7169917108";
+						google_ad_width = 468;
+						google_ad_height = 60;
+					//-->
+					</script>
+					
+					<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+				 
+				 </div>
+			 
+			 </div>			
+			
+		</div>
+	
+<!-- You can start editing here. -->
+
+<div id="comments">
+	<h3>18 Comments</h3>
+
+	<ol class="commentlist">
+
+	
+		<li class="alt" id="comment-11">
+			<h4><a href="http://www.torchdragon.com" onclick="javascript:pageTracker._trackPageview('a/http://www.torchdragon.com');"  rel='external nofollow'>Bryan Buschmann</a></h4>
+			<span class="commentmetadata">on 22 Aug 2008 at 5:34 pm </span>			
+			<p>I&#8217;m happy to see that people are still looking into this bridging solution as I&#8217;ve been searching for a sockets based solution for a project I&#8217;m involved with. However, it seems that no one has come to terms with the new security requirements of Flash and sockets.</p>
+<p>Are you currently working on what needs to be done in order to process the file-policy-request returns on the client side? I&#8217;ve been trying to decipher the actual process and unfortunately can&#8217;t come to any specific answers. I&#8217;m using my custom socket server, the test scripts that were in the initial announcement, and various client scripts.</p>
+<p>I don&#8217;t know what I&#8217;m missing here. I have a policy server running and visible, its processing requests and sending out policy but for some reason, nothing is working except the older &#8220;non-secure&#8221; clients.</p>
+<p>I would love to get some additional brainpower on this issue.</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-12">
+			<h4>bit</h4>
+			<span class="commentmetadata">on 24 Aug 2008 at 9:06 am </span>			
+			<p>I&#8217;m having the same problem as the comment above me, and your example isn&#8217;t working. for your domains&#8217; IP address (208.43.45.224) on port 80, I get &#8221; Security Error: Error #2048: Security sandbox violation: <a href="../../../../../flash/socket_bridge.swf"  rel="nofollow">http://matthaynes.net/flash/socket_bridge.swf</a> cannot load data from 208.43.45.224:80.&#8221; Did you actually check this code before you published it?? why isn&#8217;t this working?</p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-13">
+			<h4><a href="../../../../../index.html"   rel='external nofollow'>matth</a></h4>
+			<span class="commentmetadata">on 25 Aug 2008 at 8:23 pm </span>			
+			<p>I find the Flash security policies pretty confusing too. I&#8217;m not a Flash developer and haven&#8217;t got much experience with this stuff prior to developing the socketBridge app. As far as I know though, the Flash player itself deals with all the processing of policy-request files, i.e. you do not have to code any handling into your application.</p>
+<p>The way I got this working was to host a Flash master socket server on port 843, the newer Flash players will call on this first to get the policy-file. Basically my master server just serves up the following file:</p>
+<pre name="code" class="xml">
+&lt;?xml version="1.0" encoding="UTF-8"?'&gt;
+    &lt;cross-domain-policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.adobe.com/xml/schemas/PolicyFileSocket.xsd"&gt;
+    &lt;allow-access-from domain="*" to-ports="*" secure="false" /&gt;
+    &lt;site-control permitted-cross-domain-policies="master-only" /&gt;
+&lt;/cross-domain-policy&gt;
+</pre>
+<p>I then host my actual socket server on whatever port I want and handle the socketBridge requests from there. Think the process goes something like this, Flash Player connects to master server on port 843 and retrieves the policy file, based on the permissions defines it then connects to the server you requested in the socketBridge app.</p>
+<p>As I say I&#8217;m no expert at this, but this is the idea I got from reading the <a href="http://www.adobe.com/devnet/flashplayer/articles/fplayer9_security_04.html" onclick="javascript:pageTracker._trackPageview('a/http://www.adobe.com/devnet/flashplayer/articles/fplayer9_security_04.html');" rel="nofollow"> adobe post on socket policy files</a>. </p>
+<p>@bit - I&#8217;m not actually hosting a socket server on my domain here so you won&#8217;t be able to use the socketBridge to connect to it :) The socketBridge application is simply a client that allows you to talk to a socket server via javascript. You will still need to develop and host your own socket server.</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-125">
+			<h4>Tom</h4>
+			<span class="commentmetadata">on 24 Oct 2008 at 8:25 pm </span>			
+			<p>I wrote a small python policy server for the people that just don&#8217;t want to write it :)</p>
+<pre name="code" class="ruby">
+from twisted.internet import reactor
+from twisted.internet.protocol import Protocol, Factory
+_policy = "&lt;cross-domain-policy&gt;&lt;allow-access-from domain='*' to-ports='*' secure='false' /&gt;&lt;/cross-domain-policy&gt;\0"
+
+class PolicyHandler(Protocol):
+ def __init__(self):
+  pass
+
+ def dataReceived(self, data):
+  self.transport.write(_policy)
+
+def main():
+ f = Factory()
+ f.protocol = PolicyHandler
+ reactor.listenTCP(843, f)
+ print "Policy handler running on port 843."
+ reactor.run()
+
+if __name__ == '__main__':
+ main()
+</pre>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-138">
+			<h4><a href="http://www.selcukyazar.com" onclick="javascript:pageTracker._trackPageview('a/http://www.selcukyazar.com');"  rel='external nofollow'>Selçuk YAZAR</a></h4>
+			<span class="commentmetadata">on 30 Oct 2008 at 7:39 am </span>			
+			<p>Hi,</p>
+<p>thanks for the code and samples, but i tried all thing but it didn&#8217;t work.i wrote my socket server using c#. it&#8217;s listen 9000 port and i have corssdomain.xml file and i added the line &#8220;loadPolicyFile&#8221; into hx code. But it&#8217;s not working. any other suggestion.</p>
+<p>thanks in advance.</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-179">
+			<h4><a href="http://ionelmc.wordpress.com/" onclick="javascript:pageTracker._trackPageview('a/http://ionelmc.wordpress.com/');"  rel='external nofollow'>ionel</a></h4>
+			<span class="commentmetadata">on 12 Nov 2008 at 9:00 am </span>			
+			<p>The way you call the callbacks using setTimeout is bound for failure: no quote escape for the string you pass to setTimeout. While it can be easily fixed i don&#8217;t think it would be very performant. A solution would be just calling the callbacks as usual and do setTimeout if necessary in the javascript code.</p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-249">
+			<h4><a href="http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/" onclick="javascript:pageTracker._trackPageview('a/http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/');"  rel='external nofollow'>Flash socket bridge with haxe &laquo; ionel&#8217;s coderlog</a></h4>
+			<span class="commentmetadata">on 28 Nov 2008 at 11:24 pm </span>			
+			<p>[...] of solutions for making a bridge to use the flash sockets (flash.net.Socket) in javascript, notably socketBridge and jssockets. But I didn&#8217;t like the way they made you write your client code: because you [...]</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-1321">
+			<h4><a href="http://blogoholic.co.uk/2009/03/10/sockets-with-javascript/" onclick="javascript:pageTracker._trackPageview('a/http://blogoholic.co.uk/2009/03/10/sockets-with-javascript/');"  rel='external nofollow'>the blogoholic &raquo; Blog Archive &raquo; Sockets with JavaScript</a></h4>
+			<span class="commentmetadata">on 11 Mar 2009 at 12:12 am </span>			
+			<p>[...] Obviously JavaScript can&#8217;t do it directly, but with Adobe Flash and something like socketBridge (or this improved version) you could control a socket with mostly JavaScript.  The only problem [...]</p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-1955">
+			<h4>Kaiser Soze</h4>
+			<span class="commentmetadata">on 5 May 2009 at 4:15 pm </span>			
+			<p>This is a great tool. I only have one issue: how would you hide it on the page if you don&#8217;t care to display the console output? I tried several ways to do this (putting the embedded object inside a hidden div, setting the object size to 0&#215;0 or 1&#215;1, etc) but none worked. The swf crashes if I set the size too small, and it doesn&#8217;t get loaded if I wrap it around an invisible div.</p>
+<p>Any feedback on this would be greatly appreciated!</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-1956">
+			<h4><a href="../../../../../index.html"   rel='external nofollow'>matth</a></h4>
+			<span class="commentmetadata">on 5 May 2009 at 4:41 pm </span>			
+			<p>@Kaiser Soze</p>
+<p>A few options maybe, could try adding CSS display:none; div after the SWF has loaded with SWFObject ? Otherwise you could put it in a div which is absolutely positioned with top and left values of -100000px. </p>
+<p>Sure I have had this working but can&#8217;t find the exact code I used sorry.</p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-1958">
+			<h4>Kaiser Soze</h4>
+			<span class="commentmetadata">on 5 May 2009 at 6:26 pm </span>			
+			<p>Thanks! Moving it off the screen with an absolute position did the trick.</p>
+<p>You know, I&#8217;ve been testing this a lot today and sometimes I get the following error for no apparent reason:</p>
+<p>Error: Error #1502: A script has executed for longer than the default timeout period of 15 seconds.<br />
+	at Boot_3D39A$/__trace()<br />
+	at MethodInfo-65()<br />
+	at SocketBridge$/connect()<br />
+	at Function/http://adobe.com/AS3/2006/builtin::apply()<br />
+	at flash.external::ExternalInterface$/_callIn()<br />
+	at ()</p>
+<p>If you just reload the page, no code changes, it works fine the second time around. Firebug reports the following in these cases:</p>
+<p>uncaught exception: Error calling method on NPObject! [plugin exception: Error in Actionscript. Use a try/catch block to find error.].</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-1960">
+			<h4><a href="../../../../../index.html"   rel='external nofollow'>matth</a></h4>
+			<span class="commentmetadata">on 5 May 2009 at 8:23 pm </span>			
+			<p>Hmm, that&#8217;s a weird one I&#8217;ve not seen before. I&#8217;m really not that hot with Flash debugging I&#8217;m afraid!</p>
+<p>I know Ionel who commented above has his own version of the socketBridge app with some revamped code. Basically the same functionality but with a nicer JS interface, might be worth a try if you can&#8217;t track down the bug.</p>
+<p><a href="http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/" onclick="javascript:pageTracker._trackPageview('a/http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/');" rel="nofollow">http://ionelmc.wordpress.com/2008/11/29/flash-socket-bridge-with-haxe/</a></p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-1961">
+			<h4>Gilles</h4>
+			<span class="commentmetadata">on 5 May 2009 at 10:01 pm </span>			
+			<p>Seems that Symantec is now picking up socket_bridge.swf and reporting it as Downloader.Swif.C Trojan. I&#8217;ve submitted a false positive report, so hopefully it&#8217;s fixed soon, but in the mean time just a heads up.</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-9786">
+			<h4>Aexaey</h4>
+			<span class="commentmetadata">on 3 Oct 2010 at 1:13 am </span>			
+			<p>Doesn&#8217;t work with flash version 10.1.85.3. TCP connection is established to specified host/port, then &#8220;&#8221; string is sent, and after waits 2 seconds, tcp disconnects. No user data transmitter or received.</p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-12429">
+			<h4>racer</h4>
+			<span class="commentmetadata">on 29 Dec 2010 at 9:44 pm </span>			
+			<p>Is there an example with a complete html Page to see how it&#8217;s working??</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-16362">
+			<h4>muhoo</h4>
+			<span class="commentmetadata">on 18 Mar 2011 at 9:15 am </span>			
+			<p>The receive function is dying with an &#8220;unterminated string literal&#8221; on FF3 if there is any input to the socket which contains a &#8216; charachter, which, in my case, everything does! So it is unusable because of that. Is there some way to make it work with strings that have javascript special characters?</p>
+			
+		</li>
+
+	
+	
+		<li class="alt" id="comment-21326">
+			<h4><a href="http://nextdayonlinepharmacy4u.com" onclick="javascript:pageTracker._trackPageview('a/http://nextdayonlinepharmacy4u.com');"  rel='external nofollow'>joycleapola</a></h4>
+			<span class="commentmetadata">on 8 Aug 2011 at 9:53 pm </span>			
+			<p>The scope of pharmacy practice incorporates much more regular roles these kinds of as compounding and dispensing drugs, and it also involves even more present day providers relevant to health treatment, which include clinical companies, reviewing drugs for security and efficacy, <a href="http://nextdayusonlinepharmacy.com" onclick="javascript:pageTracker._trackPageview('a/http://nextdayusonlinepharmacy.com');" rel="nofollow">online pharmacy</a> Pharmacists, so, are the pros on drug treatment and are the principal health and wellbeing experts who optimize medicine use to deliver sufferers with favorable wellness results.</p>
+			
+		</li>
+
+	
+	
+		<li class="" id="comment-32656">
+			<h4><a href="http://www.easyjquery.com/how-to-connect-from-local-web-browser-to-remote-telnet-server-and-send-predefined-commands/" onclick="javascript:pageTracker._trackPageview('a/http://www.easyjquery.com/how-to-connect-from-local-web-browser-to-remote-telnet-server-and-send-predefined-commands/');"  rel='external nofollow'>How to connect from local web browser to remote telnet server and send predefined commands? | Easy jQuery | Free Popular Tips Tricks Plugins API Javascript and Themes</a></h4>
+			<span class="commentmetadata">on 21 May 2012 at 9:06 pm </span>			
+			<p>[...] 1) <a href="index.html"  rel="nofollow">http://matthaynes.net/blog/2008/07/17/socketbridge-flash-javascript-socket-bridge/</a> [...]</p>
+			
+		</li>
+
+	
+	
+	</ol>
+
+ 
+
+<h3 id="respond">Leave a comment</h3>
+
+
+<form action="http://matthaynes.net/blog/wp-comments-post.php" method="post" id="commentform">
+<fieldset>
+
+<label for="author">Name </label>
+<input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+
+<label for="email">E-Mail (will not be published) </label>
+<input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+
+<label for="url">Website</label>
+<input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<p><textarea name="comment" id="comment" rows="10" cols="" tabindex="4"></textarea></p>
+
+<p><input class="button" name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" /></p>
+
+	<input class="hidden" type="hidden" name="comment_post_ID" value="17" />
+
+	
+</fieldset>
+</form>
+
+</div>
+
+
+	
+
+	</div>
+
+<!-- google_ad_section_start(weight=ignore) -->
+	<div id="sidebar">
+		<ul>
+			
+			<!-- Search box (If you prefer having search form as a sidebar widget, remove this block) -->
+			<li>
+				<h2>Search</h2>
+
+					<form method="get" id="searchform" action="http://matthaynes.net/blog/">
+	<fieldset>
+		<label for="s" class="hidden">Search</label>		
+		<input type="text" class="textbox" size="18" name="s" id="s" />
+		<input type="submit" class="button" value="Go" />
+	</fieldset>
+</form>
+
+			</li>
+			
+
+			<li>
+				<h2>Recent posts</h2>
+				<ul>
+											<li>
+							<a href="../../../../2009/09/30/developing-dashboard-widgets-with-unimotion/index.html">
+								Developing Dashboard widgets wit&hellip;							</a></li>
+											<li>
+							<a href="../../../../2009/06/21/cycling-london-to-brighton/index.html">
+								Cycling London to Brighton							</a></li>
+											<li>
+							<a href="../../../../2009/04/19/growl-atom-constant-badgering/index.html">
+								Growl + Atom = Constant Badgerin&hellip;							</a></li>
+											<li>
+							<a href="../../../../2009/01/31/xml-directory-listing-02/index.html">
+								XML Directory Listing 0.2							</a></li>
+											<li>
+							<a href="../../../../2009/01/31/google-gone-grazy/index.html">
+								Google gone crazy							</a></li>
+											<li>
+							<a href="../../../10/05/money-to-burn-visit-swoopo/index.html">
+								Money to burn? Visit Swoopo							</a></li>
+											<li>
+							<a href="../../../09/29/javascript-and-the-unit-circle/index.html">
+								Javascript &amp; the Unit Circle							</a></li>
+											<li>
+							<a href="../../../09/27/use-an-sms-gateway-to-send-spoof-messages/index.html">
+								Use an SMS Gateway to send spoof&hellip;							</a></li>
+											<li>
+							<a href="../../../09/23/jsmin-ant-task-023/index.html">
+								JSMin Ant Task 0.2.3							</a></li>
+											<li>
+							<a href="../../../08/07/javascript-colour-functions/index.html">
+								Javascript Colour Functions							</a></li>
+									
+				</ul>
+			</li>
+
+
+			
+			
+
+			<!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
+			<li><h2>Author</h2>
+			<p>A little something about you, the author. Nothing lengthy, just an overview.</p>
+			</li>
+			-->
+
+			<li><h2>Categories</h2>
+				<ul>
+					<li class="cat-item cat-item-36"><a href="../../../../category/cycling/index.html" title="View all posts filed under cycling">cycling</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="../../../../category/programming/index.html" title="A collection of posts on programming in general. This mostly feature&#039;s javascript articles but may delve into any of the other languages I use. ">programming</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="../../../../category/websites/index.html" title="Interesting things I have found online">websites</a>
+</li>
+				</ul>
+			</li>
+
+			<li><h2>Monthly</h2>
+				<ul>
+					<li><a href='../../../../2009/09/index.html' title='September 2009'>September 2009</a></li>
+	<li><a href='../../../../2009/06/index.html' title='June 2009'>June 2009</a></li>
+	<li><a href='../../../../2009/04/index.html' title='April 2009'>April 2009</a></li>
+	<li><a href='../../../../2009/01/index.html' title='January 2009'>January 2009</a></li>
+	<li><a href='../../../10/index.html' title='October 2008'>October 2008</a></li>
+	<li><a href='../../../09/index.html' title='September 2008'>September 2008</a></li>
+	<li><a href='../../../08/index.html' title='August 2008'>August 2008</a></li>
+	<li><a href='../../index.html' title='July 2008'>July 2008</a></li>
+	<li><a href='../../../06/index.html' title='June 2008'>June 2008</a></li>
+	<li><a href='../../../../2007/09/index.html' title='September 2007'>September 2007</a></li>
+	<li><a href='../../../../2007/07/index.html' title='July 2007'>July 2007</a></li>
+				</ul>
+			</li>
+
+<!--
+			<li class="pagenav"><h2>Pages</h2><ul><li class="page_item page-item-2"><a href="http://matthaynes.net/blog/about/" title="not nearly finished yet.">not nearly finished yet.</a></li>
+</ul></li>-->
+			
+					</ul>
+		
+	</div>
+
+<!-- google_ad_section_end -->
+<div id="footer">
+	<a href="../../../../about/index.html">about</a> | <a href="../../../../feed/index.html">entries</a> | <a href="../../../../comments/feed/index.html">comments</a>
+	<br />
+		<!-- Google Analytics for WordPress | http://yoast.com/wordpress/google-analytics/ -->
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		var pageTracker = _gat._getTracker("UA-2629771-4");
+	</script>
+	<script src="../../../../wp-content/plugins/google-analytics-for-wordpress/custom_se.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	pageTracker._setLocalRemoteServerMode();		pageTracker._initData();
+		
+		pageTracker._trackPageview();
+	</script>
+	<!-- End of Google Analytics code -->
+		<script src="../../../../wp-content/plugins/google-analytics-for-wordpress/adsense-track.js" type="text/javascript"></script>
+<script type="text/javascript">
+a2a_localize = {
+	Share: "Share",
+	Save: "Save",
+	Subscribe: "Subscribe",
+	ShowAll: "Show all",
+	ShowLess: "Show less",
+	FindServices: "Find service(s)",
+	FindAnyServiceToAddTo: "Instantly find any service to add to",
+	PoweredBy: "Powered by",
+	ShareViaEmail: "Share via e-mail",
+	SubscribeViaEmail: "Subscribe via e-mail",
+	BookmarkInYourBrowser: "Bookmark in your browser",
+	BookmarkInstructions: "After clicking OK, press Ctrl+D or Cmd+D to bookmark this page",
+	AddToYourFavorites: "Add to your favorites"
+};
+a2a_linkname="socketBridge: Flash - Javascript Socket Bridge";
+a2a_linkurl="http://matthaynes.net/blog/2008/07/17/socketbridge-flash-javascript-socket-bridge/";
+a2a_show_title=1;
+
+</script><script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
+
+</div>
+</div> <!-- page -->
+
+<!-- JS Calls -->
+<script type="text/javascript">
+dp.SyntaxHighlighter.ClipboardSwf = '/js/syntax_highlighter/clipboard.swf';
+dp.SyntaxHighlighter.HighlightAll('code');
+</script>
+
+</body>
+
+
+</html>
+	
+
+<!-- Localized -->

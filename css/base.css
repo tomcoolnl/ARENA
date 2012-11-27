@@ -1,0 +1,144 @@
+/*-- 1 BASIC STYLES --*/
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+body {
+	font-size: 1em;
+	height: 100%;
+	width: 100%;
+	line-height: 1.6em;
+}
+canvas, article, aside, details, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+figcaption {
+	display: inline;
+}
+pre {
+	background-color: #fff;
+	border: 3px solid red;
+	border-radius: 12px;
+	box-shadow: 0 0 5px #999;
+	font-size: 70%;
+	padding: 20px;
+	position: relative;
+	min-width: 600px;
+	max-height: 600px;
+	overflow: auto;
+	z-index: 100000;
+}
+body > pre {
+	font-size: 120%;
+}
+h1, .h1 {
+	font: normal 1.7em/1.4em "Georgia";
+	display: inline;
+}
+h2, .h2 {
+	font-size: 1.1em;
+	font-weight: normal;
+}
+h3, .h3 {
+	font-size: 1.3em;
+	font-weight: normal;
+	padding-bottom: 3px;
+}
+h3 > a, .h3 > a, h3 > a:hover, .h3 > a:hover {
+	color: #1eaee4;
+}
+h3 > a:hover, .h3 > a:hover {
+	text-decoration: underline;
+}
+h4, .h4 {
+	font-weight: normal;
+	font-size: 11px;
+}
+a {
+	text-decoration: none;
+}
+img, fieldset {
+	border: 0;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th, td {
+	text-align: left;
+	vertical-align: top;
+}
+ul, ol, menu {
+	list-style: none;
+}
+address {
+	font-style: normal;
+}
+
+/*-- 2 STANDARD STYLES --*/
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+}
+.clickable {
+	cursor: pointer;
+}
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.hidden {
+	display: none !important;
+}
+.error {
+	color: #f00;
+}
+.spacer {
+	clear: both;
+	height: 12px;
+	line-height: 0;
+	font-size: 0;
+}
+.assistive_text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.assistive_text:active, .assistive_text:focus {
+	background: none repeat scroll 0 0 #EEEEEE;
+	border-bottom: 1px solid #DDDDDD;
+	clip: auto !important;
+	color: #1982D1;
+	font-size: 12px;
+	left: 7.6%;
+	position: absolute;
+	text-decoration: underline;
+	top: 0;
+}
+.fullwidth_container {
+	width: 100%;
+}
+.wrapper {
+	margin: 0 auto;
+	position: relative;
+}

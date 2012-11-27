@@ -1,0 +1,504 @@
+/*
+Theme Name: matthaynes.net
+Description: A theme for my site
+Version: 1.0.1
+Author: Matt Haynes
+Author URI: http://matthaynes.net/
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+
+/* Reset CSS */
+body{font-size:62.5%;font-family:verdana,helvetica,arial,sans-serif;line-height:1;text-shadow:0 0 0 #000}
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,p,blockquote,th,td,hr{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+caption{text-align:left;font-weight:normal}
+th{text-align:left}
+cite,address{font-style:normal}
+ol,ul{list-style:none}
+sub,sup{line-height:2}
+img{border:none}
+pre,code{font-size:1.1em}
+fieldset{border:0}
+q:before,q:after{content:''}
+
+body {
+	margin:0;
+	background:#e5e5e5;
+	color:#666;
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: "Helvetica Neue", Helvetia,  Arial, Verdana, Sans-Serif;
+	text-align:center;
+}
+
+h1, h1 a, h2, h2 a, h3, h4, h5, h6 {
+	margin:1em 0;
+	color:#333;
+	text-align:left;
+}
+
+a { 
+	color:#111;
+	text-decoration:none;
+}
+
+h1 a:hover, h2 a:hover, a:hover {
+	color:#d49012;
+	text-decoration:underline 
+}
+
+h1 {font-size:2.4em;}
+h2 {font-size:2em;}
+h3 {font-size:1.6em;font-family: Georgia,Tahoma,Verdana,Arial,Serif;}
+h4 {font-size:1.2em;}
+h5 {font-size:1em;}
+h6 {font-size:0.8em;}
+
+
+img {
+	border:0;
+	margin:5px;
+}
+
+img.wp-smiley {
+	margin:0;
+}
+
+
+#comments input,
+input.textbox,
+textarea {
+	border:1px solid #aaa;
+	padding:2px;
+}
+
+input.button {
+	color:#333;
+	border:1px solid #aaa;
+	padding:1px;	
+}
+
+label {font-size:1.2em;}
+
+/* Layout */
+#page {
+	background:#fff;
+	width:954px;
+	padding: 0 10px;
+	margin:0 auto;
+	text-align:left;
+}
+
+#wrapper {
+
+}
+
+#content{
+	float:left;
+	width:694px;
+	border-right:230px solid #eee;
+	margin:0 -230px 20px 0;
+	padding:0 20px 10px 10px;
+	min-height:800px;
+}
+
+#content ul {
+	list-style:disc;
+	list-style-position:inside;
+	margin-left:10px;
+}
+
+#sidebar{
+	float:left;
+	width:190px;
+	margin:0 -230px 0 0;
+	padding:20px;
+	background:#eee;
+}
+
+#footer {
+	clear:both;
+	padding:10px;
+}
+
+
+/* Date boxes */
+
+.date {
+	width:40px;
+	height:40px;
+	text-align:center;
+	border:1px solid #ccc;
+	background:#eee;
+	color:#333;
+	font-weight:bold;
+	line-height:1.32em;
+	float:right;
+}
+
+.date .day {
+	font-size:1.6em;
+}
+
+.posttitle {
+	margin:0 0 10px 0;
+	font-weight:normal;
+	font-family: Georgia,Tahoma,Verdana,Arial,Serif;
+	line-height:35px;
+	border-bottom:1px solid #ccc;
+	color:#333;
+}
+
+.posttitle a {
+	color:#333;
+}
+
+/* Header */
+
+#header {
+	margin:0 0 20px 0;
+	padding:0;
+	height:200px;
+	background:#ccc url('f/header_bg.jpg') no-repeat;
+	position:relative;
+}
+
+#headertitle {
+	position:absolute;
+	top:0px;
+	left:10px;
+	margin:0;
+	padding:0;
+	height:30px;
+	line-height:30px;
+	font-size:1.6em;
+	font-weight:normal;
+	letter-spacing:1px;
+}
+
+#header a {
+	color:#fff;
+}
+
+#headertitle p {
+	margin:0;
+	background:transparent;
+	color:#fff;
+	font-size:1.1em;
+}
+
+/* Search box */
+
+.search {
+	float:right;
+	position:relative;
+	bottom:3em;
+	right:5%;
+}
+.search form {
+	margin:0;
+	padding:0;
+}
+.search input {
+	display:inline;
+	width:218px;
+	border:1px solid #eee;
+	margin:0;
+	padding:0.2em 5px;
+	background:#237ab2;
+	color:#eee;
+	font-size:1em;
+}
+
+
+/* Top navigation */
+
+#hmenu ul {
+	position:absolute;
+	top:2px;
+	right:5px;
+	height:30px;
+	line-height:30px;
+	list-style-type:none;
+	font-size:1.2em;
+}
+
+#hmenu ul li {
+	display:inline;
+	margin:0;
+	padding:0;
+	text-transform:uppercase;
+}
+
+#hmenu ul li:before {
+	content: "| \0020";
+	color:#fff;
+}
+#hmenu ul li.hmenu1:before {
+	content: "";
+}
+#hmenu ul li a {
+	padding:0.5em;
+	margin:0;
+}
+
+/* Sidebar */
+
+#sidebar a {
+	color:#333;
+}
+
+#sidebar ul {
+	padding:0;
+	margin:-10px 0;
+	list-style: none;
+}
+#sidebar ul li {
+	margin:10px 0 20px 0;
+}
+
+#sidebar ul ul {
+	font-size:1.1em;
+	margin:10px 0 10px 0px;
+	padding:0;
+}
+
+#sidebar li li {
+	margin:5px 0 5px 0;
+}
+
+#sidebar li li li {
+	padding-left:10px;
+}
+
+#sidebar ul h2 {
+	padding:0;
+	font-family: Georgia,Tahoma,Verdana,Arial,Serif;
+	border-bottom:1px solid #ccc;	
+	color:#333;
+	font-size:1.2em;
+	line-height:1.5em;
+	text-transform:uppercase;
+}
+
+
+/* Footer */
+#footer { 
+	text-align:right;
+	font-size:1.1em;
+	background:#333;
+	color:#eee;
+}
+
+#footer a {
+	color:#aac;
+}
+
+/* Archive */
+
+.info {font-size:1.2em;margin-bottom:10px;}
+
+/* Post */
+
+.post {
+	margin:0 0 4em 0;
+	clear:both;
+}
+
+.post p, .post ol li, .post ul li{
+	margin:0.5em 0;
+	font-size:1.2em;
+	line-height:1.5em;
+	text-align:justify;
+}
+.post li li {
+	font-size:1em;
+}
+.post blockquote {
+	padding:0 0 0 2em;
+	border-left:0.4em solid #ccc;
+	font-size:0.9em;
+}
+.post blockquote blockquote {
+	margin-left:0;
+	font-size:1em;
+}
+
+.postmetadata {
+	position:relative;
+	margin:1em 0;
+	padding:0 10px;
+	color:#666;
+	text-align:justify;
+	border-top:1px solid #ccc;
+}
+
+.postmetadata h4 {font-family: Georgia,Tahoma,Verdana,Arial,Serif;font-size:1.3em;}
+
+#content .postmetadata ul,
+.postmetadata ul li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+.googleAdsense {
+	position:absolute;
+	right:10px;
+	top:40px;
+}
+
+a.more-link {font-weight:bold;}
+
+p.update {
+	margin:10px;
+	padding:10px;
+	font-size:1em;
+	border:1px solid #ccc;
+}
+
+dl.tasty-def-list {
+	margin:1em 0;
+	font-size:1.2em;
+	margin-left:100px;
+}
+
+dl.tasty-def-list dt {
+	margin:0.25em 0;
+	display:block;
+	width:200px;
+	clear:left;
+	float:left;
+}
+
+dl.tasty-def-list dd {
+	margin:0.25em 0;
+	float:left;
+}
+
+.navigation {padding-bottom:20px;font-size:1.2em;}
+
+/* Comments */
+
+#comments h3 {font-size:1.2em;}
+
+#respond {
+	padding-top:10px;
+}
+
+#comments {
+	border-top: 1px solid #ccc;
+	margin:0px 0 20px 0;
+	top:-20px;
+	position:relative;
+	padding:0 10px;
+	font-size:1.1em;
+}
+
+#comments h3 {
+	margin:10px 0;
+}
+
+.commentlist {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.commentlist li {
+	padding:5px 0;
+	overflow:auto;
+	border-bottom:0.1em solid #eee;
+}
+
+.commentlist p {
+	margin:0.5em 0;
+	line-height:1.3em;
+}
+
+.commentlist h4 {
+	margin:3px 10px 0 0;
+	font-size:1em;
+	float:left;
+}
+
+.commentmetadata {
+	display:block;
+	color:#666;
+	margin-top:2px;
+	line-height:1.2em;
+}
+
+#commentform label,
+#commentform input {
+	font-size:1em;
+}
+
+#commentform label,
+#commentform input {
+	margin:0.5em 0;
+	display:block;
+}
+
+#commentform label {
+	color:#888;
+}
+
+
+textarea#comment {
+	width:100%;
+	margin:10px 0;
+}
+/* Comment ends */
+
+
+/* Calendar */
+#wp-calendar caption {
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#27a;
+	text-align:center;
+}
+#wp-calendar thead th {
+	font-weight:normal;
+	color:#27a;
+	text-align:center;
+}
+#wp-calendar tbody td {
+	text-align:center;
+}
+#wp-calendar tbody td a {
+	font-weight:bold;
+}
+#wp-calendar tbody td.pad {
+	border:none;
+}
+/* Calendar ends */
+
+abbr {
+	cursor:help;
+	border-bottom: 0.1em dotted;
+}
+
+.alignleft {
+	float:left;
+}
+.alignright {
+	float:right;
+}
+
+.hidden {position:absolute;top:-10000px;left:-100000px}
+
+/* Custom Stuff mhaynes */
+
+code {font-size:1.2em;}
+
+#socketBridge {position:absolute;top:-1000px}
+html body p#socketBridge_output {margin-top:10px;padding:5px;width:500px;height:200px;border:1px solid #000;background:#fff;overflow:auto;}
+
+/* Localized */

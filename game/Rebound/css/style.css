@@ -1,0 +1,33 @@
+#playingArea {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	border: 1px solid black;
+	width: 500px;
+	height: 500px;
+	background-color: rgb(192,192,192);
+}
+#paddle {
+	position: absolute;
+	top: 470px;
+	left: 228px;
+	width: 64px;
+	height: 16px;
+}
+#ball {
+	position: absolute;
+	top: 4px;
+	left: 200px;
+	width: 16px;
+	height: 16px;
+}
+#score {
+	position: absolute;
+	top: 486px;
+	left: 0px;
+	width: 500px;
+	height: 14px;
+	font-size: 10pt;
+	color: white;
+	background-color: rgb(32,128,64);
+}

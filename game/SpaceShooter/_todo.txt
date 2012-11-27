@@ -1,0 +1,44 @@
+
+OODP
+X inherit Player, Enemy and Bullet form Entity
+X create Canvas object wich returns instance of self and context
+X move Interval to requestAnimationFrame including FPS's
+- implement interfaces
+- move returned event objects into scope of Objects (for Objects of type event)
+- use linked-lists to describe game stage
+- add comments, JSDocs
+- Add to Git/SVN
+
+AUDIO
+- use native Audio element (JS and HTML5)
+- kill bullet sound if already playing
+
+ASSETS (SPRITES)
+- player can upgrade ship which will be visible according to sprites
+- different enemies throught different sprites
+- asteroids
+- bullets through sprites
+
+GAME
+- make base object for games, which attaches additional events (key, pauze, tab)
+X make game as copy
+X option to pauze animation loop (change game state)
+- if frame is not active switch to pauze mode
+- shoot indefenitely
+- make game full screen
+X tweak keypress events
+X replace by native code
+X HTML to index.html and grab through DOM
+X refactor hotkeys into static object and move to core level
+- preloding sprites
+- create different enemies with different properties and sprites (including asteroids?)
+- let enemies shoot back
+- throw simpel upgrades during the game (hidden inside asteroids?)	
+- add upgrade system
+- add scoreboard and score-alorithms
+- player has limited lives and degrades according to damage done by enemies
+- enemies have a sertain level of hits they can have. Havier bullets, rays, boms kill enemies faster.
+- as player is moving left or right gracefully shows a left/right tipping over in sprite
+- add accelleration to movement
+
+- make iPad/tablet friendly

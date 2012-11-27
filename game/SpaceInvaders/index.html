@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+        <title>Space Invaders</title>
+
+		<script type="text/javascript" src="../../hci/Key.js"></script>
+
+		<script type="text/javascript" src="js/glow/glow.js"></script>
+		<script type="text/javascript" src="js/glow/effects.js"></script>
+		<script type="text/javascript" src="js/glow/widgets.js"></script>
+		
+		<script type="text/javascript" src="js/ship.js"></script>
+		<script type="text/javascript" src="js/mothership.js"></script>		
+		<script type="text/javascript" src="js/invader.js"></script>		
+		<script type="text/javascript" src="js/bullet.js"></script>		
+		<script type="text/javascript" src="js/barrier.js"></script>		
+		<script type="text/javascript" src="SpaceInvaders.js"></script>
+		
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	</head>
+	
+    <body>
+
+		<div id="info">
+			<h1>Space Invaders</h1>
+		</div>
+
+		<div id="board_holder">
+			<div id="score">SCORE: <span id="score_actual">0</span></div>
+			<div id="lives">
+				LIVES: 
+				<img src="assets/ship_icon.gif" width="30" height="16" class="life" alt="ship" />
+				<img src="assets/ship_icon.gif" width="30" height="16" class="life" alt="ship" />
+				<img src="assets/ship_icon.gif" width="30" height="16" class="life" alt="ship" />
+			</div>	
+			<div id="board">
+				<div id="game_over">
+					<h2>SPACE INVADERS JS</h2>
+					<p>
+						<a href="javascript:Game.init()">PLAY</a>
+					</p>
+					<p>CONTROLS</p>
+					<ul>
+						<li>UP ARROW - FIRE</li>
+						<li>LEFT ARROW - MOVE LEFT</li>						
+						<li>RIGHT ARROW - MOVE RIGHT</li>												
+						<li>P - PAUSE</li>																		
+					</ul>
+				</div>
+			</div>
+		</div>
+		 		
+    </body> 
+</html> 
+
+<!-- Localized -->

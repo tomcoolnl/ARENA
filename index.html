@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Example 1 - Title Screen</title>
+		<link href="css/base.css" media="all" type="text/css" rel="stylesheet" />
+		
+		<script src="core/Augment.js"></script>
+		<script src="core/Enum.js"></script>
+		<script src="core/LinkedList.js"></script>
+		
+		<script src="error/EventError.js"></script>
+		
+		<script src="event/EventPublisher.js"></script>
+		<script src="event/PaperPublisher.js"></script>
+		<script src="event/EventListener.js"></script>
+		<script src="event/KeyEventListener.js"></script>
+		<script src="event/ShortcutKeyEventListener.js"></script>
+	</head>
+	<body>		
+		<script>
+			var week = 1;
+			var person = {
+			    perWeek: function (paper) {
+			        console.log('Just read ' + paper.toUpperCase() + ' for week ' + week);
+			        week++;
+			    },
+			    perMonth: function (monthly) {
+			        console.log('After four weeks we have a ' + monthly.toUpperCase());
+			    }
+			};
+			
+			var paper = new PaperPublisher();
+			paper.subscribe(person.perWeek);
+			paper.subscribe(person.perMonth, 'monthly');
+			
+			window.setTimeout(function () { paper.daily() }, 1000);
+			window.setTimeout(function () { paper.daily() }, 2000);
+			window.setTimeout(function () { paper.daily() }, 3000);
+			window.setTimeout(function () { paper.daily() }, 4000);
+			window.setTimeout(function () { paper.monthly() }, 4000);
+		</script>
+		
+		<form action="#" onsubmit="javascript:return void(0)" style="margin: 50px;">
+			<input type="text" value="" placeholder="Please select button below" readonly="readdonly">
+			<button type="button">Open options</button>
+		</form>
+		
+		<ul style="margin: 50px;">
+			<li><a href="#">Label 101</a></li>
+			<li><a href="#">Label 102</a></li>
+			<li><a href="#">Label 103</a></li>
+			<li><a href="#">Label 104</a></li>
+			<li><a href="#">Label 105</a></li>
+		</ul>
+	</body>
+</html>

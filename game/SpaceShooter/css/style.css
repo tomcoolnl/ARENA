@@ -1,0 +1,10 @@
+/* line 1 */
+body {
+  background: #000 url('../_assets/bg_space2.jpg') center center;
+}
+#main {
+	border: 2px solid #1EAEE4;
+	border-radius: 8px;
+	margin: 100px auto;
+	width: 480px;
+}

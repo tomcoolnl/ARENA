@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-EN" dir="ltr">
+	<head>
+		<title>Anim basics</title>
+		<meta charset="UTF-8">
+		<style>
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			.example_path {
+				position: relative;
+				overflow: hidden;
+				width: 530px;
+				height: 30px;
+				border: 3px solid black;
+				margin: 100px auto;
+			}
+			.example_path .example_block {
+				position: absolute;
+				background-color: blue;
+				width: 30px;
+				height: 20px;
+				padding-top: 10px;
+				text-align: center;
+				color: white;
+				font-size: 10px;
+				white-space: nowrap;
+			}
+		</style>
+		<script>
+			function animate(opts) {
+
+				var start = new Date
+
+				var id = setInterval(function() {
+					var timePassed = new Date - start
+					var progress = timePassed / opts.duration
+
+					if (progress > 1)
+						progress = 1
+
+					var delta = opts.delta(progress)
+					opts.step(delta)
+
+					if (progress == 1) {
+						clearInterval(id)
+					}
+				}, opts.delay || 10)
+
+			}
+
+			function move(element, delta, duration) {
+				var to = 500;
+
+				animate({
+					delay : 10,
+					duration : duration || 1000, // 1 sec by default
+					delta : delta,
+					step : function(delta) {
+						element.style.left = to * delta + "px"
+					}
+				})
+
+			}
+
+			function elastic(progress) {
+				return Math.pow(2, 10 * (progress - 1)) * Math.cos(20 * Math.PI * 1.5 / 3 * progress)
+			}
+
+			function linear(progress) {
+				return progress;
+			}
+
+			function quad(progress) {
+				return Math.pow(progress, 2);
+			}
+
+			function quint(progress) {
+				return Math.pow(progress, 5);
+			}
+
+			function circ(progress) {
+				return 1 - Math.sin(Math.acos(progress));
+			}
+
+			function back(progress) {
+				return Math.pow(progress, 2) * ((1.5 + 1) * progress - 1.5);
+			}
+
+			function bounce(progress) {
+				for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
+					if (progress >= (7 - 4 * a) / 11) {
+						return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2);
+					};
+				};
+			}
+
+			function makeEaseInOut(delta) {
+				return function(progress) {
+					if (progress < .5)
+						return delta(2 * progress) / 2;
+					else
+						return (2 - delta(2 * (1 - progress))) / 2;
+				}
+			}
+
+			function makeEaseOut(delta) {
+				return function(progress) {
+					return 1 - delta(1 - progress);
+				}
+			}
+			
+			function highlight(elem) {
+	  			var from = [255,255,255], to = [255,0,0]
+			  animate({
+			    delay: 10,
+			    duration: 1000,
+			    delta: linear,
+			    step: function(delta) {
+			      elem.style.backgroundColor = 'rgb(' +
+			        Math.max(Math.min(parseInt((delta * (to[0]-from[0])) + from[0], 10), 255), 0) + ',' +
+			        Math.max(Math.min(parseInt((delta * (to[1]-from[1])) + from[1], 10), 255), 0) + ',' +
+			        Math.max(Math.min(parseInt((delta * (to[2]-from[2])) + from[2], 10), 255), 0) + ')'
+			    }
+			  })  
+			}
+			
+			function rgbToHex(r, g, b) {
+			    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+			}
+			
+			function hexToRgb(hex) {
+			    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+			    return result ? {
+			        r: parseInt(result[1], 16),
+			        g: parseInt(result[2], 16),
+			        b: parseInt(result[3], 16)
+			    } : null;
+			}
+
+		</script>
+	</head>
+	<body>
+		
+		<div onclick="highlight(document.body);" class="example_path">
+		    <div class="example_block"></div>
+		</div>
+
+	</body>
+</html>

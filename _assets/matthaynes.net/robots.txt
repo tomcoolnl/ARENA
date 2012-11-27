@@ -1,0 +1,66 @@
+# go away
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /scgi-bin/
+Disallow: /newsfeeds/
+Disallow: /zips/
+Disallow: /control/*
+Disallow: /webmail/
+Disallow: /cpanel/
+Disallow: /cgiproxy/
+Disallow: /lyricallyjustified/
+Disallow: /lyricallyjustified/*
+Disallow: /lyricallyjustified/about.htm
+Disallow: /lyricallyjustified/profiles.htm
+Disallow: /lyricallyjustified/news.htm
+Disallow: /lyricallyjustified/contact.htm
+Disallow: /lyricallyjustified/forum.htm
+Disallow: /control/email/email.php
+Disallow: /lyricallyjustified/pictures.htm
+Disallow: /bbcthree_demo/
+Disallow: /blog/wp-login.php
+Disallow: /?feed=programmes
+Disallow: /?feed=england
+Disallow: /?feed=scotland
+Disallow: /?feed=wales
+Disallow: /?feed=northern_ireland
+Disallow: /?feed=world
+Disallow: /?feed=education
+Disallow: /?feed=uk
+Disallow: /?feed=uk_politics
+Disallow: /?feed=sci/tech
+Disallow: /?feed=entertainment
+Disallow: /control/email/email.php?u=matt&amp;d=matthaynes.net
+Disallow: /control/*
+Disallow: /flash/socket_bridge.swf
+Disallow: /js/syntax_highlighter/clipboard.swf
+Disallow: /js/
+Disallow: /flash/
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-content/themes
+Disallow: /trackback
+Allow: /wp-content/uploads
+
+# Google Image
+User-agent: Googlebot-Image
+Disallow:
+Allow: /*
+
+# Google AdSense
+User-agent: Mediapartners-Google*
+Disallow:
+Allow: /*
+
+# Internet Archiver Wayback Machine
+User-agent: ia_archiver
+Disallow: /
+
+# digg mirror
+User-agent: duggmirror
+Disallow: /
+
+# Sitemap
+Sitemap: Disallow: /blog/sitemap.xml

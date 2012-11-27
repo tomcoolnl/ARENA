@@ -1,0 +1,32 @@
+
+JQUERY
+X replace by native code
+X HTML to index.html and grab through DOM
+X refactor hotkeys into static object and move to core level
+
+OODP
+- inherit Player, Enemy and Bullet form Actor
+X create Canvas object wich returns instance of self and context
+X move Interval to requestAnimationFrame including FPS's
+
+AUDIO
+- use native Audio element (JS and HTML5)
+- kill bullet sound if already playing
+
+ASSETS (SPRITES)
+- player can upgrade ship which will be visible according to sprites
+- different enemies throught different sprites
+- asteroids
+- bullets through sprites
+
+GAME
+- make game as copy
+- tweak keypress events
+- preloding sprites
+- create different enemies with different properties and sprites (including asteroids?)
+- let enemies shoot back
+- throw simpel upgrades during the game (hidden inside asteroids?)
+- add upgrade system
+- add scoreboard and score-alorithms
+- player has limited lives and degrades according to damage done by enemies
+- as player is moving left or right gracefully shows a left/right tipping over in sprite

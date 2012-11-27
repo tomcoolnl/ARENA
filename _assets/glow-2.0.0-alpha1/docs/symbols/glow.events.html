@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - glow.events</title>
+
+		<style type="text/css">
+			/* default.css */
+body
+{
+	font: 12px "Lucida Grande", Tahoma, Arial, Helvetica, sans-serif;
+	width: 800px;
+}
+
+.header
+{
+	clear: both;
+	background-color: #ccc;
+	padding: 8px;
+}
+
+h1
+{
+	font-size: 150%;
+	font-weight: bold;
+	padding: 0;
+	margin: 1em 0 0 .3em;
+}
+
+hr
+{
+	border: none 0;
+	border-top: 1px solid #7F8FB1;
+	height: 1px;
+}
+
+pre.code
+{
+	display: block;
+	padding: 8px;
+	border: 1px dashed #ccc;
+}
+
+#index
+{
+	margin-top: 24px;
+	float: left;
+	width: 160px;
+	position: absolute;
+	left: 8px;
+	background-color: #F3F3F3;
+	padding: 8px;
+}
+
+#content
+{
+	margin-left: 190px;
+	width: 600px;
+}
+
+.classList
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 0 0 8px;
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	overflow: auto;
+}
+
+.classList li
+{
+	padding: 0;
+	margin: 0 0 8px 0;
+}
+
+.summaryTable { width: 100%; }
+
+h1.classTitle
+{
+	font-size:170%;
+	line-height:130%;
+}
+
+h2 { font-size: 110%; }
+caption, div.sectionTitle
+{
+	background-color: #7F8FB1;
+	color: #fff;
+	font-size:130%;
+	text-align: left;
+	padding: 2px 6px 2px 6px;
+	border: 1px #7F8FB1 solid;
+}
+
+div.sectionTitle { margin-bottom: 8px; }
+.summaryTable thead { display: none; }
+
+.summaryTable td
+{
+	vertical-align: top;
+	padding: 4px;
+	border-bottom: 1px #7F8FB1 solid;
+	border-right: 1px #7F8FB1 solid;
+}
+
+/*col#summaryAttributes {}*/
+.summaryTable td.attributes
+{
+	border-left: 1px #7F8FB1 solid;
+	width: 140px;
+	text-align: right;
+}
+
+td.attributes, .fixedFont
+{
+	line-height: 15px;
+	color: #002EBE;
+	font-family: "Courier New",Courier,monospace;
+	font-size: 13px;
+}
+
+.summaryTable td.nameDescription
+{
+	text-align: left;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.summaryTable td.nameDescription, .description
+{
+	line-height: 15px;
+	padding: 4px;
+	padding-left: 4px;
+}
+
+.summaryTable { margin-bottom: 8px; }
+
+ul.inheritsList
+{
+	list-style: square;
+	margin-left: 20px;
+	padding-left: 0;
+}
+
+.detailList {
+	margin-left: 20px; 
+	line-height: 15px;
+}
+.detailList dt { margin-left: 20px; }
+
+.detailList .heading
+{
+	font-weight: bold;
+	padding-bottom: 6px;
+	margin-left: 0;
+}
+
+.light, td.attributes, .light a:link, .light a:visited
+{
+	color: #777;
+	font-style: italic;
+}
+
+.fineprint
+{
+	text-align: right;
+	font-size: 10px;
+}
+		</style>
+	</head>
+
+	<body>
+<!-- ============================== header ================================= -->	
+		<!-- begin static/header.html -->
+		<div id="header">
+</div>
+		<!-- end static/header.html -->
+
+<!-- ============================== classes index ============================ -->
+		<div id="index">
+			<!-- begin publish.classesIndex -->
+			<div align="center"><a href="../index.html">Class Index</a>
+| <a href="../files.html">File Index</a></div>
+<hr />
+<h2>Classes</h2>
+<ul class="classList">
+	
+	<li><i><a href="../symbols/_global_.html">_global_</a></i></li>
+	
+	<li><a href="../symbols/glow.html">glow</a></li>
+	
+	<li><a href="../symbols/glow.env.html">glow.env</a></li>
+	
+	<li><a href="../symbols/glow.events.html">glow.events</a></li>
+	
+	<li><a href="../symbols/glow.events.domevent.html">glow.events.DomEvent</a></li>
+	
+	<li><a href="../symbols/glow.events.event.html">glow.events.Event</a></li>
+	
+	<li><a href="../symbols/glow.events.keyboardevent.html">glow.events.KeyboardEvent</a></li>
+	
+	<li><a href="../symbols/glow.events.target.html">glow.events.Target</a></li>
+	
+	<li><a href="../symbols/glow.nodelist.html">glow.NodeList</a></li>
+	
+	<li><a href="../symbols/glow.util.html">glow.util</a></li>
+	
+</ul>
+<hr />
+			<!-- end publish.classesIndex -->
+		</div>
+		
+		<div id="content">
+<!-- ============================== class title ============================ -->
+			<h1 class="classTitle">
+				
+				Namespace glow.events
+			</h1>
+
+<!-- ============================== class summary ========================== -->			
+			<p class="description">
+				
+				
+			
+				
+				
+				
+					<br /><i>Defined in: </i> <a href="../symbols/src/build_2.0.0-alpha1_core.js.html">core.js</a>.
+				
+			</p>
+
+<!-- ============================== constructor summary ==================== -->			
+			
+			<table class="summaryTable" cellspacing="0" summary="A summary of the constructor documented in the class glow.events.">
+				<caption>Namespace Summary</caption>
+				<thead>
+					<tr>
+						<th scope="col">Constructor Attributes</th>
+						<th scope="col">Constructor Name and Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="attributes">&nbsp;</td>
+						<td class="nameDescription" >
+							<div class="fixedFont">
+								<b><a href="../symbols/glow.events.html#constructor">glow.events</a></b>
+							</div>
+							<div class="description">Handling custom events</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+
+<!-- ============================== properties summary ===================== -->
+			
+
+<!-- ============================== methods summary ======================== -->
+			
+				
+				
+				<table class="summaryTable" cellspacing="0" summary="A summary of the methods documented in the class glow.events.">
+					<caption>Method Summary</caption>
+					<thead>
+						<tr>
+							<th scope="col">Method Attributes</th>
+							<th scope="col">Method Name and Description</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">glow.events.<b><a href="../symbols/glow.events.html#.addListeners">addListeners</a></b>(attachTo, name, callback, thisVal)
+								</div>
+								<div class="description">Convenience method to add listeners to many objects at once.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">glow.events.<b><a href="../symbols/glow.events.html#.fire">fire</a></b>(items, eventName, event)
+								</div>
+								<div class="description">Convenience method to fire events on multiple items at once.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">glow.events.<b><a href="../symbols/glow.events.html#.removeAllListeners">removeAllListeners</a></b>(items)
+								</div>
+								<div class="description">Removes all listeners attached to a given object.</div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&lt;static&gt; &nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont">glow.events.<b><a href="../symbols/glow.events.html#.removeListeners">removeListeners</a></b>(items, eventName, callback)
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					
+					</tbody>
+				</table>
+				
+				
+				
+			
+<!-- ============================== events summary ======================== -->
+			
+
+<!-- ============================== constructor details ==================== -->		
+			
+			<div class="details"><a name="constructor"> </a>
+				<div class="sectionTitle">
+					Namespace Detail
+				</div>
+				
+				<div class="fixedFont">
+						<b>glow.events</b>
+				</div>
+				
+				<div class="description">
+					Handling custom events
+					
+				</div>
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+
+			</div>
+			
+
+<!-- ============================== field details ========================== -->		
+			
+
+<!-- ============================== method details ========================= -->		
+			
+				<div class="sectionTitle">
+					Method Detail
+				</div>
+				
+					<a name=".addListeners"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">glow.events.</span><b>addListeners</b>(attachTo, name, callback, thisVal)
+					
+					</div>
+					<div class="description">
+						Convenience method to add listeners to many objects at once.
+		If you want to add a listener to a single object, use its
+		'on' method.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Object[]}</span> <b>attachTo</b>
+									
+								</dt>
+								<dd>Array of objects to add listeners to.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>name</b>
+									
+								</dt>
+								<dd>Name of the event to listen for.
+		Event names are case sensitive.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>Function to call when the event is fired.
+		The callback will be passed a single event object. The type of this
+		object depends on the event (see documentation for the event
+		you're listening to).</dd>
+							
+								<dt>
+									<span class="light fixedFont">{Object}</span> <b>thisVal</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Value of 'this' within the callback.
+		By default, this is the object being listened to.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">See:</dt>
+							
+								<dd><a href="../symbols/glow.events.target.html#fire">glow.events.Target#fire</a></dd>
+							
+							</dl>
+						
+
+					<hr />
+				
+					<a name=".fire"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">glow.events.</span><b>fire</b>(items, eventName, event)
+					
+					</div>
+					<div class="description">
+						Convenience method to fire events on multiple items at once.
+		If you want to fire events on a single object, use its
+		'fire' method.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Object[]}</span> <b>items</b>
+									
+								</dt>
+								<dd>Array of objects to add listeners to</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to fire</dd>
+							
+								<dt>
+									<span class="light fixedFont">{<a href="../symbols/glow.events.event.html">glow.events.Event</a>|Object}</span> <b>event</b>
+									<i>Optional</i>
+								</dt>
+								<dd>Event object to pass into listeners.
+       You can provide a simple object of key-value pairs which will
+       be added as properties on the glow.events.Event instance.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".removeAllListeners"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">glow.events.</span><b>removeAllListeners</b>(items)
+					
+					</div>
+					<div class="description">
+						Removes all listeners attached to a given object.
+		This removes not only listeners you added, but listeners others
+		added too. For this reason it should only be used as part of a cleanup
+		operation on objects that are about to be destroyed.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Object[]}</span> <b>items</b>
+									
+								</dt>
+								<dd>Items to remove events from</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					<hr />
+				
+					<a name=".removeListeners"> </a>
+					<div class="fixedFont">&lt;static&gt; 
+					
+					
+					<span class="light">glow.events.</span><b>removeListeners</b>(items, eventName, callback)
+					
+					</div>
+					<div class="description">
+						
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Object[]}</span> <b>items</b>
+									
+								</dt>
+								<dd>Items to remove events from.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{string}</span> <b>eventName</b>
+									
+								</dt>
+								<dd>Name of the event to remove.</dd>
+							
+								<dt>
+									<span class="light fixedFont">{function}</span> <b>callback</b>
+									
+								</dt>
+								<dd>A reference to the original callback used when the listener was added.</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+						
+						
+
+					
+				
+			
+			
+<!-- ============================== event details ========================= -->		
+			
+			
+			<hr />
+		</div>
+
+		
+<!-- ============================== footer ================================= -->
+		<div class="fineprint" style="clear:both">
+			
+			Documentation generated by <a href="http://code.google.com/p/jsdoc-toolkit/" target="_blank">JsDoc Toolkit</a> 2.3.2 on Wed Mar 03 2010 14:15:22 GMT-0000 (GMT)
+		</div>
+	</body>
+</html>

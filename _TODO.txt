@@ -1,0 +1,48 @@
+
+- Create a (multi) key event class
+- Create a multi Swipe event class
+- Create Interface class for eg. Actor inherritance
+- Create DOM selector class
+- Create Event model class (DOM and Canvas)
+- extendEventListener (detect hasEventListener on a element and if so extendEventListener)
+- 'Live' detection of events
+
+- Create a Level class (containing Players, turn based)
+
+Player:
+------------------------------------------------------------
+
+-log in/out
+- register
+- localstorage
+- web db through DAO
+- offline / appCache
+- multiplayer through websockets
+- onload : check state
+
+
+GAME:
+------------------------------------------------------------
+- controller / state pattern
+- determine turns (Level class)
+- actor class
+- animation class
+
+
+SCORE:
+------------------------------------------------------------
+- score class
+- timer class
+- health bar class
+
+
+Create a space invader game:
+- remove 'glow' 
+- parallax background atached to key events
+
+
+Create a tower defense game (static paths)
+Create a tower defense game (fluid paths)
+Create a mission based shooter
+
+

@@ -1,0 +1,40 @@
+body {
+    margin:0 auto;
+    padding: 0;
+    text-align:center;
+    background:#000;
+}
+
+#holder {
+    width:500px;
+    height:500px;
+    position:relative;
+    margin:0 auto;
+    padding:0;
+}
+
+#center {
+    width:10px;
+    height:10px;
+    background:#000;
+    position:absolute;
+    top: 249.5px;
+    left:249.5px;
+    z-index:0;
+    visibility:hidden;    
+  }
+
+.point {
+    width:50px;
+    height:50px;
+    font-size: 10px;
+    position:absolute;
+    z-index:1;
+}
+
+
+#adsenseUnit {width:730px;margin:60px auto 10px auto;padding-left:10px;}
+#info {width:300px;padding:10px;position:absolute;top:0;left:0;color:#fff;text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:14px;}
+#info h1 {font-size:1.2em;}
+#info p a {text-decoration:underline;color:#fff;}
+#info p a:hover {text-decoration:none;color:#fff;}

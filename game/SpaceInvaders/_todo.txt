@@ -1,0 +1,5 @@
+move to canvas
+
+make game without images (css with DOM || drawings within canvas)
+
+

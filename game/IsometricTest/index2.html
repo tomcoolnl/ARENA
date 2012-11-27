@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title></title>
+	<body>
+		<script>
+			
+			if (typeof Object.prototype.augment !== 'function') {
+				 Object.prototype.augment = function (receivingClass, givingClass, methods) {
+				 	methods = methods || [], n = methods.length;
+			 		if (n > 0) { // Only give certain methods.
+					    for (var i = 0; i < n; i += 1) {
+					      receivingClass.prototype[methods[i]] = givingClass.prototype[methods[i]];
+						};
+					} else { // Give all methods.
+					    for (methodName in givingClass.prototype) {
+							if (!receivingClass.prototype[methodName]) {
+								receivingClass.prototype[methodName] = givingClass.prototype[methodName];
+							};
+						};
+					};
+				};
+			};
+			
+			if (typeof Object.prototype.equals !== 'function') {
+				Object.prototype.equals = function(x) {
+				  
+				  var p;
+				  for (p in this) {
+				      if (typeof(x[p]) == 'undefined') {
+				      	return false;
+				      };
+				  };
+				
+				  for (p in this) {
+				      if (this[p]) {
+				          switch(typeof(this[p])) {
+				              case 'object':
+				                  if (!this[p].equals(x[p])) {
+				                  	return false;
+				                  };
+				                  break;
+				              case 'function':
+				                  if (typeof(x[p]) == 'undefined' ||  (p != 'equals' && this[p].toString() != x[p].toString())) {
+				                  	  return false;
+				                  };
+				                  break;
+				              default:
+				                  if (this[p] != x[p]) {
+				                  	return false;
+				                  };
+				          };
+				      } else {
+				          if (x[p])
+				              return false;
+				      }
+				  }
+				
+				  for (p in x) {
+				      if (typeof(this[p]) == 'undefined') {
+				      	return false;
+				      }
+				  }
+				  return true;
+				};
+			};
+			
+			//TODO extend as Array
+			if (typeof Object.prototype.extends !== 'function') {
+				 Object.prototype.extends = function (parent) {
+				 	console.log(typeof parent, parent);
+				 	var Fn = function() {};
+					Fn.prototype = parent.prototype;
+					this.prototype = new Fn();
+					this.prototype.constructor = this;
+					this.parent = parent.prototype;
+				 };
+			};
+			
+			if (typeof Object.prototype.clone !== 'function') {
+				 Object.prototype.clone = function (object) {
+			 		var Fn = function() {};
+		            Fn.prototype = object;
+		            return new Fn;
+				 };
+			};
+			
+			
+			// var DBError = function () {
+				// Error.apply(this, arguments);
+			// };
+// 			
+			// DBError.prototype = new Error();
+			// DBError.prototype.constructor = DBError;
+			// DBError.prototype.name = 'DBError';
+			
+			function DBError(message) {
+			    this.name = 'DBError';
+			    this.message = message || 'undefiend DBError occured';
+			    this.stack = (new Error()).stack;
+			}
+			DBError.prototype = new Error;
+			DBError.prototype.constructor = DBError;
+			
+			console.log(ReferenceError);
+			
+			// DBError.extends(Error);
+			// dberror = new DBError();
+			throw new DBError();
+			// throw new Error('Error');
+			
+			
+			// var Animal = function (type, name) {
+				// this.type = type || false;
+				// this.name = name || false;
+			// };
+// 			
+			// Animal.prototype.identify = function () {
+				// console.log(this.type, this.name);
+			// };
+// 			
+			// var Dog = function (breed, name) {
+				// this.type 	= 'Dog';
+				// this.breed 	= breed;
+				// this.name 	= name;
+			// };
+// 			
+			// Dog.extends(Animal);
+// 			
+			// Dog.prototype.identify = function () {
+				// console.log('method overwritten');
+				// this.constructor.parent.identify.apply(this);
+			// };
+// 			
+			// var dog = new Dog('Labrador', 'Fido');
+			// dog.identify();
+// 			
+			// console.log(dog);			
+// 			
+			// var dog2 = new Dog('Labrador2', 'Fido2');
+			// dog2.extends(new Array);
+			// console.log(dog2);
+			
+
+
+		</script>
+	</body>
+</html>
