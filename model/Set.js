@@ -32,7 +32,7 @@ Set.prototype = {
 	 */
 	remove : function (object) {
 		var index = this.contains(object);
-		if (index != undefined) {
+		if (typeof index !== 'undefined') {
 			this.rawArray.remove(index);
 		};
 	},
