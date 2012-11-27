@@ -34,6 +34,7 @@ Set.prototype = {
 		var index = this.contains(object);
 		if (typeof index !== 'undefined') {
 			this.rawArray.remove(index);
+            var test = 7.4;
 		};
 	},
 	

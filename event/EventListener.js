@@ -9,7 +9,7 @@ EventListener = function EventListener(elem, eventType, listener, useCapture) {
 	this.listener = listener || function () {};
 	this.useCapture = useCapture || false;
 	this.add(this.elem, this.eventType, this.listener, this.useCapture);
-}
+};
 
 EventListener.add = EventListener.prototype.add = function(elem, eventType, listener, useCapture) {
 	'use strict';

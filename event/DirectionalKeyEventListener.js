@@ -1,5 +1,5 @@
 
-DirectionalKeyEventListener = function DirectionalKeyEventListener(listeners, wasd) {
+;DirectionalKeyEventListener = function DirectionalKeyEventListener(listeners, wasd) {
 	'use strict';
 	
 	var self = this;
