@@ -52,7 +52,7 @@ function DirectionalKeyEventListener(listeners, wasd) {
 	 * @type object
 	 * @private
 	 */
-	this.keyup	 = this.setKeys(KeyEventListener.eventType.UP, false);
+	this.keyup = this.setKeys(KeyEventListener.eventType.UP, false);
 };
 /**
  * Inherit from KeyEventListener
@@ -121,4 +121,21 @@ DirectionalKeyEventListener.prototype.handleMovement = function() {
 	} else if (this.listeners.down && this.pressed.down) {
 		this.listeners.down();
 	};
+};
+/**
+ * Checks wether any directional key is pressed
+ * @this {DirectionalKeyEventListener}
+ * @return {Boolean}
+ * @method noKeysArePressed
+ */
+DirectionalKeyEventListener.prototype.noKeysArePressed = function() {
+	'use strict';
+	var p = false;
+    loop : for (var key in this.pressed) {
+        if (this.pressed[key]) {
+            p = true;
+            break loop;
+        };
+    };
+    return p;
 };

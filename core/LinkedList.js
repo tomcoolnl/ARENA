@@ -77,7 +77,7 @@ LinkedList.prototype = {
 		'use strict';
 		//create a new item object, place data in
 		var node = new LinkedList.Node(data);
-		console.log(node)
+		// console.log(node)
 		//used to traverse the structure
 		var current;
 
@@ -92,7 +92,7 @@ LinkedList.prototype = {
 			}
 
 			current.next = node;
-		}
+		};
 
 		//don't forget to update the count
 		this._length += 1;
@@ -113,7 +113,7 @@ LinkedList.prototype = {
 			var current = this._head, 
 				i = 0;
 
-			while ((i += 1) < index) {
+			while (i++ < index) {
 				current = current.next;
 			};
 
@@ -143,7 +143,7 @@ LinkedList.prototype = {
 			} else {
 
 				//find the right location
-				while ((i += 1) < index) {
+				while (i++ < index) {
 					previous = current;
 					current = current.next;
 				};
@@ -160,7 +160,7 @@ LinkedList.prototype = {
 
 		} else {
 			return null;
-		}
+		};
 
 	},
 
@@ -233,7 +233,7 @@ LinkedList.Doubly = function LinkedListDoubly() {
      * @private
      */    
     this._length = 0;
-}
+};
 
 /**
  * Extend Doubly with Linkedlist, to inherit it's prototype
@@ -255,7 +255,7 @@ LinkedList.Doubly.prototype.add = function (data){
     //create a new item object, place data in
     var node = new LinkedList.Node(data);
     //special case: no items in the list yet
-    if (this._length == 0) {
+    if (this._length === 0) {
         this._head = node;
         this._tail = node;
     } else {
