@@ -13,7 +13,7 @@ function Hero(canvas, context, active, posx, posy, width, height) {
 	this.sprite 	= new Sprite('images/game.png', this.width, this.height, this.defaultSpriteOffsetX, 0);
 };
 
-Hero.extends(Entity);
+Hero.extends(MovingEntity);
 
 Hero.prototype.draw = function() {
 	this.bullets.forEach(function(bullet) {
@@ -83,7 +83,7 @@ Hero.Bullet = function Bullet(canvas, context, active, speed, posx, posy, width,
 	this.sprite 	= new Sprite('images/bullet.png', this.width, this.height, 0, 0);
 };
 
-Hero.Bullet.extends(Entity);
+Hero.Bullet.extends(MovingEntity);
 
 Hero.Bullet.prototype.update = function() {
 	this.posx += this.xVelocity;

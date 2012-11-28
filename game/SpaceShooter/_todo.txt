@@ -43,7 +43,7 @@ X refactor hotkeys into static object and move to core level
 - add upgrade system
 - add scoreboard and score-alorithms
 - player has limited lives and degrades according to damage done by enemies
-- enemies have a sertain level of hits they can have. Havier bullets, rays, boms kill enemies faster.
+- enemies have a sertain level of hits they can have. Havier bullets, rays, bombs kill enemies faster.
 - as player is moving left or right gracefully shows a left/right tipping over in sprite
 - add accelleration to movement
 

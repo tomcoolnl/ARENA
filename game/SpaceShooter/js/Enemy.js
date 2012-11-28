@@ -17,7 +17,7 @@ Enemy = function Enemy(canvas, context, active, posx, posy, width, height) {
     this.sprite 	= new Sprite('images/enemy.png', this.width, this.height, 0, 0);
 };
 
-Enemy.extends(Entity);
+Enemy.extends(MovingEntity);
 
 Enemy.prototype.update = function() {
 	'use strict';

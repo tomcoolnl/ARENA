@@ -107,7 +107,7 @@
 			
 			events.directionalKeys.handleMovement();
             
-            if (events.directionalKeys.noKeysArePressed() === false) {
+            if (events.directionalKeys.noKeysArePressed()) {
                 hero.resetSprite();
             };
 		},

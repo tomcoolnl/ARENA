@@ -73,7 +73,7 @@ DirectionalKeyEventListener.prototype.handleKey = function(key, eventType, direc
 	'use strict';
 	var self = this;
 	return this.listeners[direction] 
-			? new KeyEventListener(key, eventType, function () { self.pressed[direction] = enable; }) 	
+			? new KeyEventListener(key, eventType, function () { self.pressed[direction] = enable; })
 			: function () { return false; };
 };
 /**
@@ -133,10 +133,10 @@ DirectionalKeyEventListener.prototype.handleMovement = function() {
  */
 DirectionalKeyEventListener.prototype.noKeysArePressed = function() {
 	'use strict';
-	var p = false;
+	var p = true;
     loop : for (var key in this.pressed) {
         if (this.pressed[key]) {
-            p = true;
+            p = false;
             break loop;
         };
     };
