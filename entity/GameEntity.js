@@ -223,8 +223,8 @@ GameEntity.prototype.removeComponentWithName = function(componentName) {
    };
    // Detach removed components
    if (removedComponents) {
-       i = removedComponents.length;
-       while (i--) {
+       var n = removedComponents.length;
+       while (n--) {
            removedComponents[i].detach();
        };
    };
