@@ -1,32 +1,32 @@
  
-Enemy = function Enemy(canvas, context, active, posx, posy, width, height) {
+function Enemy(canvas, context, active, position, dimensions) {
 	'use strict';
-	this.canvas 	= canvas;
-	this.context 	= context;
-	
-	this.active 	= active || true;
-	this.posx 		= posx || canvas.width / 4 + Math.random() * canvas.width / 2;
-	this.posy 		= posy || 0;
-	this.width 		= width || 32;
-    this.height 	= height || 32;
     
+    Array.prototype.push.call(arguments, 'images/enemy.png');
+    MovingEntity.apply(this, arguments);
+    
+	this.position.x	= this.setRandomPositionX();
     this.age = (Math.random() * 128) << 0;
-    this.xVelocity 	= 0;
-    this.yVelocity 	= 2;
-    
-    this.sprite 	= new Sprite('images/enemy.png', this.width, this.height, 0, 0);
+    this.velocity = {x : 0, y : 2};
 };
-
+/**
+ * 
+ * @param {MovingEntity} param
+ */
 Enemy.extends(MovingEntity);
-
+/**
+ * @overwrite
+ * @returns {undefined}
+ */
 Enemy.prototype.update = function() {
 	'use strict';
-	
-	this.posx += this.xVelocity;
-    this.posy += this.yVelocity;
-
-    this.xVelocity = 3 * Math.sin(this.age * Math.PI / 64);
+	this.position.x += this.velocity.x;
+    this.position.y += this.velocity.y;
+    this.velocity.x = 3 * Math.sin(this.age * Math.PI / 64);
     this.age += 1;
-
     this.active = this.isAlive();
+};
+
+Enemy.prototype.setRandomPositionX = function() {
+    return this.canvas.width / 4 + Math.random() * this.canvas.width / 2;
 };

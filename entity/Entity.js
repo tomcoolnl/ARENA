@@ -3,22 +3,20 @@
  * @version 0.1
  * 
  * Object binding events to directional keypress input from a player
- * @class GameEntity
+ * @class Entity
  * @package ARENA
  * @constructor
- * @this {GameEntity}
+ * @this {Entity}
  *
  * @param {Object}  canvas
  * @param {Object}  context
  * @param {Boolean} active
- * @param {Int}     posx
- * @param {Int}     posy
- * @param {Int}     width
- * @param {Int}     height
- * @param {STring}  spriteSrc
- * @returns {GameEntity}
+ * @param {Object}  position
+ * @param {Object}     dimention
+ * @param {String}  spriteSrc
+ * @returns {Entity}
  */
-function GameEntity(canvas, context, active, posx, posy, width, height, spriteSrc) {
+function Entity(canvas, context, active, position, dimensions, sprite) {
 	'use strict';
     /**
 	 * Object refering to the Canvas API
@@ -42,121 +40,107 @@ function GameEntity(canvas, context, active, posx, posy, width, height, spriteSr
 	 */
 	this.active = active || true;
     /**
-	 * Entity's x position
-	 * @property posx
-	 * @type int
+	 * Entity's x and y position
+	 * @property position.x
+	 * @type object
 	 * @private
 	 */
-	this.posx = posx || 0;
+	this.position = position || { x : 0, y : 0 };
     /**
-	 * Entity's y position
-	 * @property posy
-	 * @type int
+	 * Entity's height and width
+	 * @property dimensions
+	 * @type object
 	 * @private
 	 */
-	this.posy = posy || 0;
-    /**
-	 * Entity's width
-	 * @property width
-	 * @type int
-	 * @private
-	 */
-	this.width = width;
-    /**
-	 * Entity's height
-	 * @property height
-	 * @type int
-	 * @private
-	 */
-	this.height = height;
+	this.dimention = dimensions;
 	/**
 	 * Optional image to display
 	 * @property sprite
-	 * @type int
+	 * @type string
 	 * @private
 	 */
     this.sprite = undefined;
 	if (typeof spriteSrc === 'string' && spriteSrc.length > 0) {
-		this.sprite = new Sprite(spriteSrc, this.width, this.height, 0, 0);
+		this.sprite = new Sprite(sprite, this.width, this.height, 0, 0);
 	};
 	
 	return this;
 };
 /**
  * Check if entity is alive
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method isAlive
  */
-GameEntity.prototype.isAlive = function() {
+Entity.prototype.isAlive = function() {
 	'use strict';
 	return this.active && this.inBounds();
 };
 /**
  * Check if entity is within canvas boundries
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method inBounds
  */
-GameEntity.prototype.inBounds = function() {
+Entity.prototype.inBounds = function() {
 	'use strict';
-	return this.posx >= 0 
-		&& this.posx <= this.canvas.width 
-		&& this.posy >= 0 
-		&& this.posy <= this.canvas.height;
+	return this.position.x >= 0 
+		&& this.position.x <= this.canvas.width 
+		&& this.position.y >= 0 
+		&& this.position.y <= this.canvas.height;
 };
 /**
  * Draw entity to canvas according to position and sprite
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method draw
  */
-GameEntity.prototype.draw = function() {
+Entity.prototype.draw = function() {
 	'use strict';
 	if (typeof this.sprite !== 'undefined') {
-		this.sprite.draw(this.context, this.posx, this.posy);
+		this.sprite.draw(this.context, this.position.x, this.position.y);
 	} else {
 		throw new Error('Nothing to draw...');
 	};
 };
 /**
  * Activate
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method activate
  */
-GameEntity.prototype.activate = function() {
+Entity.prototype.activate = function() {
 	'use strict';
 	this.active = true;
 };
 /**
  * Deactivate
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method deactivate
  */
-GameEntity.prototype.deactivate = function() {
+Entity.prototype.deactivate = function() {
 	'use strict';
 	this.active = false;
 };
 /**
  * Deactivate and show optional explosion
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method explode
  */
-GameEntity.prototype.explode = function() {
+Entity.prototype.explode = function() {
 	'use strict';
 	this.deactivate();
 };
 /**
  * Adds and attaches a component, to this entity
  * @param {Component}  component
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Component}
  * @method addComponent
  */
-GameEntity.prototype.addComponent = function(component) {
+Entity.prototype.addComponent = function(component) {
    // Check if we already have this component, if we do - make sure the component allows stacking
    var existingVersionOfComponent = this.getComponentWithName(component.displayName);
    if (existingVersionOfComponent && !existingVersionOfComponent.canStack) {
@@ -175,11 +159,11 @@ GameEntity.prototype.addComponent = function(component) {
 /**
 * Convenience method that calls addComponent then calls execute on the newly created component
 * @param {Component}  component
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Component}
  * @method addComponentAndExecute
 */
-GameEntity.prototype.addComponentAndExecute = function(component) {
+Entity.prototype.addComponentAndExecute = function(component) {
    var wasAdded = this.addComponent(component);
    if (wasAdded) {
        component.execute();
@@ -190,11 +174,11 @@ GameEntity.prototype.addComponentAndExecute = function(component) {
 /**
  * Returns a component with a matching .displayName property
  * @param componentName
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Component}
  * @method getComponentWithName
  */
-GameEntity.prototype.getComponentWithName = function(componentName) {
+Entity.prototype.getComponentWithName = function(componentName) {
    var len = this.components.length;
    var component = null;
    for (var i = 0; i < len; ++i) {
@@ -208,11 +192,11 @@ GameEntity.prototype.getComponentWithName = function(componentName) {
 /**
  * Removes a component with a matching .displayName property
  * @param {String}  componentName
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method removeComponentWithName
  */
-GameEntity.prototype.removeComponentWithName = function(componentName) {
+Entity.prototype.removeComponentWithName = function(componentName) {
    var len = this.components.length;
    var removedComponents = [];
    for (var i = 0; i < len; ++i) {
@@ -231,11 +215,11 @@ GameEntity.prototype.removeComponentWithName = function(componentName) {
 };
 /**
  * Removes all components contained in this entity
- * @this {GameEntity}
+ * @this {Entity}
  * @return {Void}
  * @method removeAllComponents
  */
-GameEntity.prototype.removeAllComponents = function() {
+Entity.prototype.removeAllComponents = function() {
    var n = this.components.length;
    while (n--) {
        this.components[n].detach();

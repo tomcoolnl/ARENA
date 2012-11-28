@@ -150,7 +150,7 @@
 //            canvas.height = document.body.clientHeight - (canvas.style.paddingTop + canvas.style.paddingBottom);
 			context = canvas.getContext('2d');
 			
-            hero 	= new Hero(canvas, context, true, 50, 270, 40, 40);
+            hero 	= new Hero(canvas, context, true, {x : 50, y : 270}, { width : 40, height : 40});
 			enemies = new Array();
 			// console.dir(hero);
 			// bind keyboard

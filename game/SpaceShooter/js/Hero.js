@@ -1,21 +1,19 @@
 
-function Hero(canvas, context, active, posx, posy, width, height) {
-	this.canvas 	= canvas;
-	this.context 	= context;
-	this.active 	= active || false; 
-	this.posx 		= posx;
-	this.posy 		= posy;
-	this.width 		= width;
-	this.height 	= height;
-	this.bullets 	= [];
-    
+function Hero(canvas, context, active, position, dimensions) {
+    'use strict';
+    Array.prototype.push.call(arguments, 'images/game.png');
+    MovingEntity.apply(this, arguments);
+	this.bullets = [];
     this.defaultSpriteOffsetX = 40;
-	this.sprite 	= new Sprite('images/game.png', this.width, this.height, this.defaultSpriteOffsetX, 0);
 };
 
 Hero.extends(MovingEntity);
-
+/**
+ * @overwrites
+ * @returns {undefined}
+ */
 Hero.prototype.draw = function() {
+    'use strict';
 	this.bullets.forEach(function(bullet) {
     	bullet.draw();
 	});
@@ -23,34 +21,40 @@ Hero.prototype.draw = function() {
 };
 
 Hero.prototype.update = function() {
+    'use strict';
 	this.bullets.forEach(function(bullet) {
 		bullet.update();
 	});
 };
 
 Hero.prototype.moveLeft = function() {
-	this.posx -= 10;
-	this.posx = this.posx.clamp(0, this.canvas.width - this.width);
+    'use strict';
+	this.position.x -= 10;
+	this.position.x = this.position.x.clamp(0, this.canvas.width - this.dimensions.width);
     this.sprite.offsetX = 0;
 };
 
 Hero.prototype.moveRight = function() {
-	this.posx += 10;
-	this.posx = this.posx.clamp(0, this.canvas.width - this.width);
+    'use strict';
+	this.position.x += 10;
+	this.position.x = this.position.x.clamp(0, this.canvas.width - this.dimensions.width);
     this.sprite.offsetX = 80;
 };
 
 Hero.prototype.moveUp = function() {
-	this.posy -= 10;
-	this.posy = this.posy.clamp(0, this.canvas.height - this.height);
+    'use strict';
+	this.position.y -= 10;
+	this.position.y = this.position.y.clamp(0, this.canvas.height - this.dimensions.height);
 };
 
 Hero.prototype.moveDown = function() {
-	this.posy += 10;
-	this.posy = this.posy.clamp(0, this.canvas.height - this.height);
+    'use strict';
+	this.position.y += 10;
+	this.position.y = this.position.y.clamp(0, this.canvas.height - this.dimensions.height);
 };
 
 Hero.prototype.shoot = function() {
+    'use strict';
 	//Sound.play("shoot");
 	var position = this.midpoint();
 	this.bullets.push(
@@ -59,34 +63,32 @@ Hero.prototype.shoot = function() {
 };
 
 Hero.prototype.resetSprite = function() {
+    'use strict';
 	this.sprite.offsetX = this.defaultSpriteOffsetX;
 };
     
 Hero.prototype.midpoint = function() {
+    'use strict';
 	return {
-		x : this.posx + (this.width / 2),
-		y : this.posy + (this.height / 2)
+		x : this.position.x + (this.dimensions.width / 2),
+		y : this.position.y + (this.dimensions.height / 2)
 	};
 };
 
-Hero.Bullet = function Bullet(canvas, context, active, speed, posx, posy, width, height, color) {
-	this.canvas 	= canvas;
-	this.context 	= context;
-	this.active 	= active || true;
-	this.posx 		= posx;
-	this.posy 		= posy;
-	this.xVelocity 	= 0;
-	this.yVelocity 	= -speed;
-	this.width 		= width || 3;
-	this.height 	= height || 3;
-	this.color 		= color || '#fff';
-	this.sprite 	= new Sprite('images/bullet.png', this.width, this.height, 0, 0);
+Hero.Bullet = function Bullet(canvas, context, active, position, dimensions, speed) {
+    'use strict';
+     
+	this.velocity = {x : 0, y : -speed};
+	arguments.pop();
+    arguments.push('images/bullet.png');
+    MovingEntity.apply(this, arguments);
 };
 
 Hero.Bullet.extends(MovingEntity);
 
 Hero.Bullet.prototype.update = function() {
-	this.posx += this.xVelocity;
-    this.posy += this.yVelocity;
+    'use strict';
+	this.position.x += this.velocity.x;
+    this.position.y += this.velocity.y;
     this.active = this.isAlive();
 };
