@@ -40,12 +40,18 @@
 			});
 			
 			events.directionalKeys = new DirectionalKeyEventListener({
-				left : function () {
+				left : function() {
 					hero.moveLeft();
 				},
 				right : function() {
 					hero.moveRight();
-				}
+				},
+                up : function() {
+                    hero.moveUp();
+                },
+                down : function() {
+                    hero.moveDown();
+                }
 			}, wasd);
 			
 			events.shoot = new KeyEventListener('space', KeyEventListener.eventType.DOWN, function () {
@@ -140,6 +146,8 @@
             self    = this;
             
 			canvas 	= document.querySelector('#main');
+//            canvas.width = document.body.clientWidth - (canvas.style.paddingLeft + canvas.style.paddingRight);
+//            canvas.height = document.body.clientHeight - (canvas.style.paddingTop + canvas.style.paddingBottom);
 			context = canvas.getContext('2d');
 			
             hero 	= new Hero(canvas, context, true, 50, 270, 40, 40);

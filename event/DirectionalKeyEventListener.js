@@ -114,11 +114,14 @@ DirectionalKeyEventListener.prototype.handleMovement = function() {
 	
 	if (this.listeners.left && this.pressed.left) {
 		this.listeners.left();
-	} else if (this.listeners.right && this.pressed.right) {
+	};
+    if (this.listeners.right && this.pressed.right) {
 		this.listeners.right();
-	} else if (this.listeners.up && this.pressed.up) {
+	};
+    if (this.listeners.up && this.pressed.up) {
 		this.listeners.up();
-	} else if (this.listeners.down && this.pressed.down) {
+	};
+    if (this.listeners.down && this.pressed.down) {
 		this.listeners.down();
 	};
 };

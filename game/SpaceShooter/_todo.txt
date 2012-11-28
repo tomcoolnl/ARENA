@@ -9,13 +9,17 @@ X move Interval to requestAnimationFrame including FPS's
 - add comments, JSDocs
 - Add to Git/SVN
 
+ANIMATION
+- plot different enemy paths
+- 
+
 AUDIO
 - use native Audio element (JS and HTML5)
 - kill bullet sound if already playing
 
 ASSETS (SPRITES)
 - player can upgrade ship which will be visible according to sprites
-- different enemies throught different sprites
+- different enemies through different sprites
 - asteroids
 - bullets through sprites
 
@@ -30,10 +34,12 @@ X tweak keypress events
 X replace by native code
 X HTML to index.html and grab through DOM
 X refactor hotkeys into static object and move to core level
-- preloding sprites
+- preloding sprites, place within HTML?
 - create different enemies with different properties and sprites (including asteroids?)
 - let enemies shoot back
-- throw simpel upgrades during the game (hidden inside asteroids?)	
+- move back and forward (including sprite animation)
+- accellerate movement
+- throw simple upgrades during the game (hidden inside asteroids?)
 - add upgrade system
 - add scoreboard and score-alorithms
 - player has limited lives and degrades according to damage done by enemies

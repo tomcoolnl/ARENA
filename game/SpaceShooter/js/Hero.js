@@ -1,5 +1,5 @@
 
-Hero = function Hero(canvas, context, active, posx, posy, width, height) {
+function Hero(canvas, context, active, posx, posy, width, height) {
 	this.canvas 	= canvas;
 	this.context 	= context;
 	this.active 	= active || false; 
@@ -29,22 +29,32 @@ Hero.prototype.update = function() {
 };
 
 Hero.prototype.moveLeft = function() {
-	this.posx -= 6;
+	this.posx -= 10;
 	this.posx = this.posx.clamp(0, this.canvas.width - this.width);
     this.sprite.offsetX = 0;
 };
 
 Hero.prototype.moveRight = function() {
-	this.posx += 6;
+	this.posx += 10;
 	this.posx = this.posx.clamp(0, this.canvas.width - this.width);
     this.sprite.offsetX = 80;
+};
+
+Hero.prototype.moveUp = function() {
+	this.posy -= 10;
+	this.posy = this.posy.clamp(0, this.canvas.height - this.height);
+};
+
+Hero.prototype.moveDown = function() {
+	this.posy += 10;
+	this.posy = this.posy.clamp(0, this.canvas.height - this.height);
 };
 
 Hero.prototype.shoot = function() {
 	//Sound.play("shoot");
 	var position = this.midpoint();
 	this.bullets.push(
-		new Hero.Bullet( this.canvas, this.context, true, 8, position.x, position.y, 7, 19 )
+		new Hero.Bullet( this.canvas, this.context, true, 16, position.x, position.y, 7, 19 )
 	);
 };
 
